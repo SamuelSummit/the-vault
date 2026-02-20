@@ -7,62 +7,58 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Playfair+Display:wght@700&display=swap');
-        
+        html { scroll-behavior: smooth; }
         body { background-color: #0a0a0a; color: #e0e0e0; font-family: 'Space Mono', monospace; overflow-x: hidden; }
         .luxury-text { font-family: 'Playfair Display', serif; }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        
-        /* The High-Authority Mansion Background */
         .hero-bg { 
             background: linear-gradient(rgba(10,10,10,0.6), rgba(10,10,10,0.85)), 
             url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80'); 
-            background-size: cover; 
-            background-position: center;
-            background-attachment: fixed;
+            background-size: cover; background-position: center; background-attachment: fixed;
         }
         .accent-glow { text-shadow: 0 0 20px rgba(0, 255, 133, 0.5); }
-        .btn-hover:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,255,133,0.2); }
+        .btn-hover:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,255,133,0.3); background-color: #00ff85; color: #000; }
     </style>
 </head>
 <body class="hero-bg min-h-screen flex flex-col items-center">
 
     <nav class="w-full p-8 flex justify-between items-center z-50 max-w-7xl">
-        <div class="text-xl font-bold tracking-tighter uppercase">Summit <span class="text-green-400 italic">Digital Labs</span></div>
+        <div class="text-xl font-bold tracking-tighter uppercase">Summit <span class="text-green-400 italic font-light">Digital Labs</span></div>
         <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.3em] opacity-70">
-            <a href="https://summitcoastcapital.com" target="_blank" class="hover:text-green-400 transition-colors">Lending</a>
-            <a href="#" class="hover:text-green-400 transition-colors text-gray-500">AI Scout (Coming Soon)</a>
+            <a href="mailto:samuel@summitcoastcapital.com" class="hover:text-green-400 transition-colors">Lending Inquiry</a>
             <a href="#register" class="hover:text-green-400 transition-colors">The Vault</a>
+            <a href="https://samuelsummit.github.io/the-vault/" class="hover:text-green-400 transition-colors text-white border-b border-green-400">Home</a>
         </div>
     </nav>
 
     <main class="flex-grow flex flex-col items-center justify-center p-6 text-center mt-12 mb-20">
-        <div class="glass p-10 md:p-24 rounded-[40px] max-w-5xl animate-fade-in">
-            <span class="text-green-400 text-xs font-bold tracking-[0.4em] uppercase mb-6 block accent-glow">2026 Veteran Masterclass</span>
-            <h1 class="luxury-text text-5xl md:text-8xl mb-8 leading-tight text-white">THE FORECLOSURE <br><span class="italic font-light">INSIDER</span></h1>
+        <div class="glass p-10 md:p-24 rounded-[40px] max-w-5xl">
+            <span class="text-green-400 text-xs font-bold tracking-[0.4em] uppercase mb-6 block accent-glow underline decoration-1 underline-offset-8">2026 Veteran Masterclass</span>
+            <h1 class="luxury-text text-5xl md:text-8xl mb-8 leading-tight text-white">THE FORECLOSURE <br><span class="italic font-light text-gray-400">INSIDER</span></h1>
             
             <p class="text-gray-300 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed font-light">
                 18 years of REO field experience and "scar tissue" distilled into one AI-powered system. 
                 Find equity others miss. Fund deals others can't. 
             </p>
             
-            <div id="register" class="flex flex-col items-center space-y-4">
-                <a href="YOUR_STRIPE_OR_PAYPAL_LINK_HERE" class="btn-hover bg-white text-black px-12 py-6 rounded-full font-bold uppercase tracking-widest transition-all duration-300">
+            <div id="register" class="flex flex-col items-center space-y-4 pt-10">
+                <a href="mailto:samuel@summitcoastcapital.com?subject=Access The Vault Request" class="btn-hover bg-white text-black px-12 py-6 rounded-full font-bold uppercase tracking-widest transition-all duration-300">
                     Access The Vault — $197
                 </a>
-                <p class="text-[9px] text-gray-500 uppercase tracking-widest mt-4">Secure Checkout via Summit Coast Capital</p>
+                <p class="text-[9px] text-gray-500 uppercase tracking-widest mt-4">Secure Access via Summit Coast Capital</p>
             </div>
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mt-24 opacity-40 text-[10px] uppercase tracking-[0.3em]">
-            <div class="border-t border-gray-700 pt-4"><p>Industry Veteran</p><p class="text-white text-lg mt-1">18+ Years</p></div>
+            <div class="border-t border-gray-700 pt-4"><p>Industry Veteran</p><p class="text-white text-lg mt-1 italic">18+ Years</p></div>
             <div class="border-t border-gray-700 pt-4"><p>Market Focus</p><p class="text-white text-lg mt-1">FL // CO</p></div>
-            <div class="border-t border-gray-700 pt-4"><p>AI Scout Protocol</p><p class="text-white text-lg mt-1 font-bold text-green-400">ENCRYPTED</p></div>
+            <div class="border-t border-gray-700 pt-4"><p>AI Scout Protocol</p><p class="text-white text-lg mt-1 font-bold text-green-400">ACTIVE</p></div>
             <div class="border-t border-gray-700 pt-4"><p>Funding Engine</p><p class="text-white text-lg mt-1 uppercase text-sm">DSCR Ready</p></div>
         </div>
     </main>
 
     <footer class="p-10 text-[9px] text-gray-600 uppercase tracking-[0.4em]">
-        © 2026 Summit Digital Labs & Summit Coast Capital. All Rights Reserved.
+        © 2026 Summit Digital Labs & Summit Coast Capital.
     </footer>
 
 </body>
