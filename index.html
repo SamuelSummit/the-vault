@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Vault | Foreclosure Insider by Summit Coast</title>
+    <title>The Vault | Foreclosure Intelligence</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
@@ -11,7 +11,8 @@
         body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; }
         .serif { font-family: 'Playfair Display', serif; }
         .glass-nav { background: rgba(0, 0, 0, 0.9); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
-        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.3s ease; }
+        .glass-card:hover { border-color: rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.02); }
         .vault-hero { 
             background: linear-gradient(rgba(0,0,0,0.7), rgba(5,5,5,1)), 
             url('https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&w=1920&q=80'); 
@@ -23,10 +24,12 @@
 
     <nav class="fixed top-0 w-full z-50 glass-nav">
         <div class="max-w-7xl mx-auto px-8 h-24 flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-tighter uppercase">The <span class="text-emerald-500 italic font-light">Vault</span></div>
+            <div class="text-2xl font-bold tracking-tighter uppercase text-white">The <span class="text-emerald-500 italic font-light">Vault</span></div>
             <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.4em] font-medium items-center">
                 <a href="https://summitcoastcapital.com" class="hover:text-emerald-400 transition opacity-70 italic">Back to Summit Coast</a>
-                <a href="mailto:Samuel@summitcoastcapital.com?subject=Vault%20Access%20Request" class="bg-emerald-600 text-white px-6 py-3 rounded-full hover:bg-emerald-500 transition tracking-widest text-[9px]">Request Access</a>
+                
+                <a href="mailto:Samuel@summitcoastcapital.com?subject=Vault%20Access%20Request%20-%20Insider%20Package&body=Hello%20Samuel%2C%0A%0AI%20am%20interested%20in%20requesting%20access%20to%20The%20Vault%20Foreclosure%20Intelligence.%0A%0A1.%20Full%20Name%3A%0A2.%20Phone%20Number%3A%0A3.%20Primary%20Market%20(FL/CO/Other)%3A%0A4.%20Investing%20Experience%20(Years/Deals)%3A%0A5.%20Current%20Capital%20Capacity%3A%0A%0APlease%20provide%20the%20onboarding%20details.%20Thank%20you." 
+                   class="bg-emerald-600 text-white px-6 py-3 rounded-full hover:bg-emerald-500 transition tracking-widest text-[9px] font-bold">Request Access</a>
             </div>
         </div>
     </nav>
@@ -36,6 +39,7 @@
             <span class="text-emerald-500 text-xs font-bold tracking-[0.5em] uppercase mb-6 block">Confidential Intelligence</span>
             <h1 class="serif text-6xl md:text-8xl mb-8 leading-none">Off-Market <br><span class="italic font-light text-emerald-500">Foreclosure Data</span></h1>
             <p class="text-xl text-gray-400 font-light mb-12 italic">The forensic scouting strategies used by Samuel Salankey to find untapped equity in FL & CO.</p>
+            <div class="h-px w-24 bg-emerald-500 mx-auto opacity-50"></div>
         </div>
     </section>
 
@@ -43,23 +47,29 @@
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
             <div class="glass-card p-12 rounded-[40px]">
                 <h3 class="serif text-3xl text-emerald-400 mb-6 italic">The Scout Package</h3>
-                <p class="text-gray-400 font-light leading-relaxed mb-8">Access the daily-updated list of pre-foreclosures and REO opportunities before they hit the courthouse steps.</p>
+                <p class="text-gray-400 font-light leading-relaxed mb-8">Access the daily-updated list of pre-foreclosures and REO opportunities before they hit the courthouse steps. Direct-to-seller data for maximum equity capture.</p>
                 <div class="border-t border-white/10 pt-6">
-                    <span class="text-[10px] uppercase tracking-widest text-emerald-500">Includes Equity-Scout AI Data</span>
+                    <span class="text-[10px] uppercase tracking-widest text-emerald-500 font-bold">Includes Equity-Scout AI Data</span>
                 </div>
             </div>
             <div class="glass-card p-12 rounded-[40px]">
                 <h3 class="serif text-3xl text-emerald-400 mb-6 italic">Institutional Workouts</h3>
-                <p class="text-gray-400 font-light leading-relaxed mb-8">Direct notes on distressed debt and portfolio acquisition strategies for seasoned capital partners.</p>
+                <p class="text-gray-400 font-light leading-relaxed mb-8">Direct notes on distressed debt and portfolio acquisition strategies. Tailored for capital partners looking to scale beyond the retail market.</p>
                 <div class="border-t border-white/10 pt-6">
-                    <span class="text-[10px] uppercase tracking-widest text-emerald-500">Strategy by Samuel Salankey</span>
+                    <span class="text-[10px] uppercase tracking-widest text-emerald-500 font-bold">Strategy by Samuel Salankey</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="p-20 text-center text-[10px] text-gray-600 uppercase tracking-[0.4em] border-t border-white/5">
-        A Summit Coast Capital Intelligence Product.
+    <section class="py-32 px-8 bg-emerald-950/10 border-y border-white/5 text-center">
+        <h2 class="serif text-5xl mb-8 italic">Ready to go <span class="text-emerald-500 not-italic">Off-Market?</span></h2>
+        <p class="text-gray-400 mb-12 max-w-xl mx-auto">Vetting is required for all intelligence access. Click below to submit your investor profile for review.</p>
+        <a href="mailto:Samuel@summitcoastcapital.com?subject=Vault%20Access%20Request&body=Full%20Name%3A%0APhone%3A%0AMarket%3A%0AExperience%3A" class="bg-white text-black px-12 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-emerald-400 transition inline-block">Request Access Now</a>
+    </section>
+
+    <footer class="p-20 text-center text-[10px] text-gray-600 uppercase tracking-[0.4em]">
+        © 2026 A Summit Coast Capital Intelligence Product.
     </footer>
 
 </body>
