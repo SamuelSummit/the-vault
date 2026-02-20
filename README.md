@@ -1,2 +1,2 @@
 # the-vault
-Summit Coast Capital Landing Page
+Summit Digital Labs Landing Page
