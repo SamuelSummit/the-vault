@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Foreclosure Insider | Summit Coast Capital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+        
+        body { background-color: #0a0a0a; color: #e0e0e0; font-family: 'Space Mono', monospace; }
+        .luxury-text { font-family: 'Playfair Display', serif; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .hero-bg { 
+            background: linear-gradient(rgba(10,10,10,0.7), rgba(10,10,10,0.8)), url('YOUR_MANSION_IMAGE_URL'); 
+            background-size: cover; background-position: center;
+        }
+        .accent-glow { text-shadow: 0 0 15px rgba(0, 255, 133, 0.4); }
+    </style>
+</head>
+<body class="hero-bg min-h-screen flex flex-col items-center justify-center p-6 text-center">
+
+    <nav class="fixed top-0 w-full p-6 flex justify-between items-center z-50">
+        <div class="text-xl font-bold tracking-tighter uppercase">Summit <span class="text-green-400 italic">Digital Labs</span></div>
+        <div class="hidden md:flex space-x-8 text-xs uppercase tracking-widest opacity-60">
+            <a href="#" class="hover:text-white">Lending</a>
+            <a href="#" class="hover:text-white">AI Scout</a>
+            <a href="#" class="hover:text-white">The Vault</a>
+        </div>
+    </nav>
+
+    <div class="glass p-10 md:p-20 rounded-3xl max-w-4xl animate-fade-in mt-20">
+        <span class="text-green-400 text-xs font-bold tracking-[0.3em] uppercase mb-4 block accent-glow">Exclusive Pilot Launch</span>
+        <h1 class="luxury-text text-5xl md:text-7xl mb-6 leading-tight">THE FORECLOSURE <br><span class="italic text-white">INSIDER</span></h1>
+        <p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
+            18 years of REO scar tissue distilled into a single AI-powered system. 
+            Find the equity others miss. Fund the friction. Build the empire.
+        </p>
+        
+        <a href="#register" class="bg-white text-black px-10 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-green-400 transition-all duration-300">
+            Access The Vault — $197
+        </a>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 opacity-50 text-[10px] uppercase tracking-[0.2em]">
+        <div><p>Experience</p><p class="text-white text-lg">18+ Years</p></div>
+        <div><p>Assets Found</p><p class="text-white text-lg">500M+</p></div>
+        <div><p>AI Scout</p><p class="text-white text-lg font-bold">ACTIVE</p></div>
+        <div><p>Territory</p><p class="text-white text-lg">CO // FL</p></div>
+    </div>
+
+</body>
+</html>
