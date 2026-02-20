@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Vault | Foreclosure Intelligence</title>
+    <title>The Vault | Exclusive Foreclosure Intelligence</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
         html { scroll-behavior: smooth; }
         body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; }
         .serif { font-family: 'Playfair Display', serif; }
-        .glass-nav { background: rgba(0, 0, 0, 0.9); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
-        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.3s ease; }
-        .glass-card:hover { border-color: rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.02); }
-        .vault-hero { 
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(5,5,5,1)), 
-            url('https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&w=1920&q=80'); 
-            background-size: cover; background-position: center;
-        }
+        .glass-nav { background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .vault-card { background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%); border: 1px solid rgba(16, 185, 129, 0.1); transition: all 0.4s ease; }
+        .vault-card:hover { border-color: #10b981; transform: scale(1.02); background: rgba(16, 185, 129, 0.05); }
+        .gold-glow { text-shadow: 0 0 20px rgba(16, 185, 129, 0.5); }
+        .hero-section { background: radial-gradient(circle at center, #0a231a 0%, #050505 100%); }
     </style>
 </head>
 <body>
@@ -25,51 +22,77 @@
     <nav class="fixed top-0 w-full z-50 glass-nav">
         <div class="max-w-7xl mx-auto px-8 h-24 flex justify-between items-center">
             <div class="text-2xl font-bold tracking-tighter uppercase text-white">The <span class="text-emerald-500 italic font-light">Vault</span></div>
-            <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.4em] font-medium items-center">
-                <a href="https://summitcoastcapital.com" class="hover:text-emerald-400 transition opacity-70 italic">Back to Summit Coast</a>
-                
-                <a href="mailto:Samuel@summitcoastcapital.com?subject=Vault%20Access%20Request%20-%20Insider%20Package&body=Hello%20Samuel%2C%0A%0AI%20am%20interested%20in%20requesting%20access%20to%20The%20Vault%20Foreclosure%20Intelligence.%0A%0A1.%20Full%20Name%3A%0A2.%20Phone%20Number%3A%0A3.%20Primary%20Market%20(FL/CO/Other)%3A%0A4.%20Investing%20Experience%20(Years/Deals)%3A%0A5.%20Current%20Capital%20Capacity%3A%0A%0APlease%20provide%20the%20onboarding%20details.%20Thank%20you." 
-                   class="bg-emerald-600 text-white px-6 py-3 rounded-full hover:bg-emerald-500 transition tracking-widest text-[9px] font-bold">Request Access</a>
-            </div>
+            <a href="https://summitcoastcapital.com" class="text-[10px] uppercase tracking-widest text-gray-500 hover:text-white transition">← Return to Summit Coast</a>
         </div>
     </nav>
 
-    <section class="vault-hero min-h-screen flex items-center justify-center pt-24 px-6 text-center">
+    <section class="hero-section min-h-screen flex items-center justify-center pt-24 px-6 text-center">
         <div class="max-w-4xl">
-            <span class="text-emerald-500 text-xs font-bold tracking-[0.5em] uppercase mb-6 block">Confidential Intelligence</span>
-            <h1 class="serif text-6xl md:text-8xl mb-8 leading-none">Off-Market <br><span class="italic font-light text-emerald-500">Foreclosure Data</span></h1>
-            <p class="text-xl text-gray-400 font-light mb-12 italic">The forensic scouting strategies used by Samuel Salankey to find untapped equity in FL & CO.</p>
-            <div class="h-px w-24 bg-emerald-500 mx-auto opacity-50"></div>
-        </div>
-    </section>
-
-    <section class="py-32 px-8">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
-            <div class="glass-card p-12 rounded-[40px]">
-                <h3 class="serif text-3xl text-emerald-400 mb-6 italic">The Scout Package</h3>
-                <p class="text-gray-400 font-light leading-relaxed mb-8">Access the daily-updated list of pre-foreclosures and REO opportunities before they hit the courthouse steps. Direct-to-seller data for maximum equity capture.</p>
-                <div class="border-t border-white/10 pt-6">
-                    <span class="text-[10px] uppercase tracking-widest text-emerald-500 font-bold">Includes Equity-Scout AI Data</span>
-                </div>
-            </div>
-            <div class="glass-card p-12 rounded-[40px]">
-                <h3 class="serif text-3xl text-emerald-400 mb-6 italic">Institutional Workouts</h3>
-                <p class="text-gray-400 font-light leading-relaxed mb-8">Direct notes on distressed debt and portfolio acquisition strategies. Tailored for capital partners looking to scale beyond the retail market.</p>
-                <div class="border-t border-white/10 pt-6">
-                    <span class="text-[10px] uppercase tracking-widest text-emerald-500 font-bold">Strategy by Samuel Salankey</span>
-                </div>
+            <span class="text-emerald-500 text-xs font-bold tracking-[0.6em] uppercase mb-6 block">Access Restricted to Capital Partners</span>
+            <h1 class="serif text-6xl md:text-9xl mb-8 leading-none gold-glow">Stop Buying <br><span class="italic font-light text-white">Retail.</span></h1>
+            <p class="text-xl md:text-2xl text-gray-400 font-light mb-12 max-w-2xl mx-auto leading-relaxed">
+                The best deals never make it to the MLS. They are found in the <span class="text-white font-bold">Shadow Inventory</span>—and I'm giving you the keys.
+            </p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center">
+                <a href="#details" class="bg-emerald-600 text-white px-12 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-emerald-500 transition">See What's Inside</a>
             </div>
         </div>
     </section>
 
-    <section class="py-32 px-8 bg-emerald-950/10 border-y border-white/5 text-center">
-        <h2 class="serif text-5xl mb-8 italic">Ready to go <span class="text-emerald-500 not-italic">Off-Market?</span></h2>
-        <p class="text-gray-400 mb-12 max-w-xl mx-auto">Vetting is required for all intelligence access. Click below to submit your investor profile for review.</p>
-        <a href="mailto:Samuel@summitcoastcapital.com?subject=Vault%20Access%20Request&body=Full%20Name%3A%0APhone%3A%0AMarket%3A%0AExperience%3A" class="bg-white text-black px-12 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-emerald-400 transition inline-block">Request Access Now</a>
+    <section id="details" class="py-32 px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24">
+                <h2 class="serif text-5xl md:text-6xl mb-6">Inside <span class="text-emerald-500 italic">The Intelligence</span></h2>
+                <p class="text-gray-500 uppercase tracking-widest text-xs">A forensic deal-flow system built over 18 years</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="vault-card p-12 rounded-[40px]">
+                    <div class="w-12 h-12 bg-emerald-500/20 rounded-full flex items-center justify-center text-emerald-500 mb-8 font-bold text-xl">01</div>
+                    <h3 class="serif text-3xl mb-6 italic">The Forensic Scout</h3>
+                    <p class="text-gray-400 font-light leading-relaxed mb-8">Daily-updated intelligence on <strong>Pre-Foreclosures</strong> across Florida and Colorado. Know who is in trouble before the bank even files the paperwork.</p>
+                </div>
+
+                <div class="vault-card p-12 rounded-[40px]">
+                    <div class="w-12 h-12 bg-emerald-500/20 rounded-full flex items-center justify-center text-emerald-500 mb-8 font-bold text-xl">02</div>
+                    <h3 class="serif text-3xl mb-6 italic">AI Equity Hunter</h3>
+                    <p class="text-gray-400 font-light leading-relaxed mb-8">Our proprietary AI algorithm scans public records to identify <strong>trapped equity</strong> and "motivated sellers" based on 14 secret distress triggers.</p>
+                </div>
+
+                <div class="vault-card p-12 rounded-[40px]">
+                    <div class="w-12 h-12 bg-emerald-500/20 rounded-full flex items-center justify-center text-emerald-500 mb-8 font-bold text-xl">03</div>
+                    <h3 class="serif text-3xl mb-6 italic">Shadow Inventory</h3>
+                    <p class="text-gray-400 font-light leading-relaxed mb-8">Direct access to REO (Bank Owned) lists and <strong>Short Sale</strong> opportunities that haven't been picked over by the general public.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-8 bg-[#080808] border-y border-white/5">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="serif text-5xl mb-8 leading-tight">This isn't a course. <br>It's <span class="text-emerald-500 italic">Unfair Competition.</span></h2>
+            <p class="text-gray-400 text-lg mb-12 font-light">
+                When you join The Vault, you aren't just getting data. You're getting the exact deal-finding machine Samuel Salankey uses to fund over $500M in volume. 
+            </p>
+            
+            <div class="bg-emerald-900/10 p-12 rounded-[50px] border border-emerald-500/20 mb-12">
+                <h4 class="text-white uppercase tracking-[0.3em] text-xs font-bold mb-8">Limited Distribution Intelligence</h4>
+                <ul class="text-left space-y-4 max-w-md mx-auto mb-10 text-gray-300">
+                    <li class="flex items-center gap-4"><span class="text-emerald-500">✓</span> Real-time FL & CO Lead Lists</li>
+                    <li class="flex items-center gap-4"><span class="text-emerald-500">✓</span> Skip Tracing & Seller Contact Scripts</li>
+                    <li class="flex items-center gap-4"><span class="text-emerald-500">✓</span> Equity-Scout AI Data Training</li>
+                    <li class="flex items-center gap-4"><span class="text-emerald-500">✓</span> Direct Access to Private Funding Channels</li>
+                </ul>
+                <a href="mailto:Samuel@summitcoastcapital.com?subject=Requesting%20The%20Keys%20to%20The%20Vault&body=Samuel%2C%0A%0AI%20want%20the%20unfair%20advantage.%20Please%20send%20the%20onboarding%20packet%20for%20The%20Vault.%0A%0A1.%20Full%20Name%3A%0A2.%20Phone%3A%0A3.%20Market%20Focus%3A%0A4.%20Experience%20Level%3A" 
+                   class="inline-block bg-white text-black px-12 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-emerald-400 transition transform hover:scale-105">
+                    Request the Combination
+                </a>
+            </div>
+        </div>
     </section>
 
     <footer class="p-20 text-center text-[10px] text-gray-600 uppercase tracking-[0.4em]">
-        © 2026 A Summit Coast Capital Intelligence Product.
+        © 2026 A Summit Coast Capital Intelligence Product. Built for the Elite Investor.
     </footer>
 
 </body>
