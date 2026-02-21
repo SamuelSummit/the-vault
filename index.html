@@ -12,46 +12,52 @@
         .serif { font-family: 'Playfair Display', serif; }
         
         /* TICKER - Tactical Discipline */
-        .ticker-wrap { background: #000; border-bottom: 1px solid rgba(255,255,255,0.05); overflow: hidden; white-space: nowrap; padding: 10px 0; position: sticky; top: 0; z-index: 100; }
+        .ticker-wrap { background: #000; border-bottom: 1px solid rgba(255,255,255,0.05); overflow: hidden; white-space: nowrap; padding: 12px 0; position: sticky; top: 0; z-index: 100; }
         .ticker { display: inline-block; animation: ticker 60s linear infinite; font-size: 8px; font-weight: 700; letter-spacing: 4px; color: #666; text-transform: uppercase; }
         @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
 
-        /* THE FLUID GRID (Ethan Marcotte Principles) */
+        /* THE FLUID GRID */
         .system-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; background-color: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.05); }
-        .grid-item { background-color: #050505; padding: 40px; transition: 0.4s; }
+        .grid-item { background-color: #050505; padding: 48px 40px; transition: 0.4s; position: relative; overflow: hidden; }
         .grid-item:hover { background-color: #0a0a0a; }
+        .ghost-number { position: absolute; bottom: -10px; right: 10px; font-size: 100px; font-weight: 900; color: rgba(255,255,255,0.02); pointer-events: none; }
 
-        /* BUTTONS - Business Problem Solvers */
+        /* BUTTONS */
         .btn-principal { 
             border: 1px solid #fff; color: #fff; background: transparent; 
-            padding: 20px 40px; font-size: 10px; font-weight: 800; 
+            padding: 22px 40px; font-size: 10px; font-weight: 800; 
             text-transform: uppercase; letter-spacing: 5px; transition: 0.3s;
             width: 100%; max-width: 350px; display: block; margin: 0 auto;
         }
-        .btn-principal:hover { background: #fff; color: #000; }
+        .btn-principal:hover { background: #fff; color: #000; transform: scale(1.02); }
 
-        /* MOBILE OPTIMIZED MODAL */
-        #payment-modal { display: none; position: fixed; inset: 0; z-index: 10000; background: #000; flex-direction: column; padding: 40px 30px; }
+        /* MODAL */
+        #payment-modal { 
+            display: none; position: fixed; inset: 0; z-index: 10000; 
+            background: rgba(0,0,0,0.99); flex-direction: column; padding: 40px 30px; 
+            align-items: center; justify-content: center;
+        }
         #payment-modal.active { display: flex !important; }
-        .close-trigger { align-self: flex-end; font-size: 40px; color: #444; cursor: pointer; line-height: 0.5; margin-bottom: 40px; }
+        .modal-container { width: 100%; max-width: 450px; position: relative; }
+        .close-trigger { position: absolute; top: -50px; right: 0; font-size: 40px; color: #444; cursor: pointer; }
     </style>
 </head>
 <body>
 
     <div class="ticker-wrap">
         <div class="ticker">
-            SYSTEM STATUS: DEPLOYED • HARVESTING: PINELLAS (FL) / BOULDER (CO) • FORENSIC EQUITY MATCH: ACTIVE • CAPITAL WINDOW: $5M+ LIQUIDITY
+            SYSTEM STATUS: DEPLOYED • HARVESTING: PINELLAS (FL) / BOULDER (CO) • FORENSIC EQUITY MATCH: ACTIVE • CAPITAL WINDOW: $5M+ LIQUIDITY • SYSTEM STATUS: DEPLOYED
         </div>
     </div>
 
     <nav class="p-10 flex justify-between items-center max-w-7xl mx-auto">
         <img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="SCC" class="h-8 md:h-12 grayscale opacity-70">
-        <div class="text-[8px] uppercase tracking-[0.5em] text-slate-700 font-bold">Protocol v4.0</div>
+        <div class="text-[8px] uppercase tracking-[0.5em] text-slate-700 font-bold italic">Principal Access Terminal</div>
     </nav>
 
-    <header class="py-20 px-10 text-center max-w-4xl mx-auto">
-        <h1 class="serif text-5xl md:text-8xl mb-8 italic text-white uppercase tracking-tighter leading-none">The <span class="text-slate-600 not-italic font-light">Vault.</span></h1>
-        <p class="text-slate-500 text-xs md:text-sm font-medium leading-loose mb-12 uppercase tracking-[0.5em]">
+    <header class="py-24 px-10 text-center max-w-4xl mx-auto">
+        <h1 class="serif text-5xl md:text-8xl mb-8 italic text-white uppercase tracking-tighter leading-none">The <span class="text-slate-600 not-italic font-light uppercase">Vault.</span></h1>
+        <p class="text-slate-500 text-[10px] md:text-xs font-medium leading-loose mb-12 uppercase tracking-[0.6em] opacity-80">
             Proprietary Forensic Infrastructure <br> for High-Equity Capture
         </p>
         <button onclick="toggleModal()" class="btn-principal">Secure Access ($497)</button>
@@ -59,21 +65,25 @@
 
     <section class="max-w-7xl mx-auto system-grid">
         <div class="grid-item">
+            <div class="ghost-number">01</div>
             <h4 class="text-[9px] text-slate-600 font-bold tracking-[0.4em] mb-8 uppercase">01 / Scrape</h4>
             <h2 class="serif text-2xl italic mb-4">Direct Harvest</h2>
-            <p class="text-slate-500 text-[11px] leading-loose font-light">Courthouse API extraction. Pinpointing probate, tax-deed, and lis pendens data 45 days before retail listing.</p>
+            <p class="text-slate-500 text-[11px] leading-loose font-light italic">Courthouse API extraction. Pinpointing probate, tax-deed, and lis pendens data 45 days before retail listing.</p>
         </div>
         <div class="grid-item">
+            <div class="ghost-number">02</div>
             <h4 class="text-[9px] text-slate-600 font-bold tracking-[0.4em] mb-8 uppercase">02 / Filter</h4>
             <h2 class="serif text-2xl italic mb-4">AI Trigger</h2>
-            <p class="text-slate-500 text-[11px] leading-loose font-light">14-point equity filter. Refining raw noise into concentrated distress events with >40% equity spreads.</p>
+            <p class="text-slate-500 text-[11px] leading-loose font-light italic">14-point equity filter. Refining raw noise into concentrated distress events with >40% equity spreads.</p>
         </div>
         <div class="grid-item">
+            <div class="ghost-number">03</div>
             <h4 class="text-[9px] text-slate-600 font-bold tracking-[0.4em] mb-8 uppercase">03 / Acquire</h4>
             <h2 class="serif text-2xl italic mb-4">The Scripts</h2>
-            <p class="text-slate-500 text-[11px] leading-loose font-light">Institutional positioning. Principal-to-principal dialogue scripts designed to convert distress into equity partnerships.</p>
+            <p class="text-slate-500 text-[11px] leading-loose font-light italic">Institutional positioning. Principal-to-principal dialogue scripts designed to convert distress into equity partnerships.</p>
         </div>
-        <div class="grid-item border-l-0 md:border-l border-white/20 bg-white/[0.02]">
+        <div class="grid-item bg-white/[0.02]">
+            <div class="ghost-number text-white/[0.03]">04</div>
             <h4 class="text-[9px] text-white font-bold tracking-[0.4em] mb-8 uppercase">04 / Fund</h4>
             <h2 class="serif text-2xl italic mb-4 text-white uppercase">Liquidity</h2>
             <p class="text-slate-300 text-[11px] leading-loose italic font-light">Direct priority access to the SCC lending desk. Asset-based capital deployment for Vault-sourced assets.</p>
@@ -96,20 +106,22 @@
     </section>
 
     <footer class="py-32 text-center opacity-20">
-        <p class="text-[8px] tracking-[1.5em] uppercase">Summit Coast Capital Institutional</p>
+        <p class="text-[8px] tracking-[1.5em] uppercase">Summit Coast Capital • v4.0</p>
     </footer>
 
-    <div id="payment-modal">
-        <span class="close-trigger" onclick="toggleModal()">&times;</span>
-        <div class="max-w-xs mx-auto text-center mt-12">
-            <h2 class="serif text-4xl italic mb-4">Activate <br><span class="text-slate-600 not-italic uppercase text-xl tracking-widest leading-loose">Protocol.</span></h2>
-            <div class="space-y-6 mb-16 text-left border-y border-white/5 py-12">
-                <div class="flex items-center gap-4 text-[10px] tracking-widest text-slate-500 uppercase"><span>✔</span> Phase 01-04 Digital Protocols</div>
-                <div class="flex items-center gap-4 text-[10px] tracking-widest text-slate-500 uppercase"><span>✔</span> Institutional Script Library</div>
-                <div class="flex items-center gap-4 text-[10px] tracking-widest text-white font-bold italic uppercase"><span>✔</span> Priority Funding Window</div>
+    <div id="payment-modal" onclick="toggleModal()">
+        <div class="modal-container" onclick="event.stopPropagation()">
+            <span class="close-trigger" onclick="toggleModal()">&times;</span>
+            <div class="text-center">
+                <h2 class="serif text-4xl italic mb-4">Activate <br><span class="text-slate-600 not-italic uppercase text-xl tracking-widest leading-loose">Protocol.</span></h2>
+                <div class="space-y-6 mb-16 text-left border-y border-white/5 py-12 px-4">
+                    <div class="flex items-center gap-4 text-[10px] tracking-widest text-slate-500 uppercase"><span>✔</span> Phase 01-04 Digital Protocols</div>
+                    <div class="flex items-center gap-4 text-[10px] tracking-widest text-slate-500 uppercase"><span>✔</span> Institutional Script Library</div>
+                    <div class="flex items-center gap-4 text-[10px] tracking-widest text-white font-bold italic uppercase"><span>✔</span> Priority Funding Window</div>
+                </div>
+                <a href="https://buy.stripe.com/test_5kQeVfc9Z3si23hcYyb7y00" class="btn-principal">Proceed to Secure Stripe ($497)</a>
+                <p class="text-[7px] text-slate-700 mt-10 uppercase tracking-widest italic">Lending subject to asset-based underwriting.</p>
             </div>
-            <a href="https://buy.stripe.com/test_5kQeVfc9Z3si23hcYyb7y00" class="btn-principal">Proceed ($497)</a>
-            <p class="text-[7px] text-slate-700 mt-10 uppercase tracking-widest italic">Lending subject to asset-based underwriting.</p>
         </div>
     </div>
 
@@ -119,6 +131,7 @@
             m.classList.toggle('active');
             document.body.style.overflow = m.classList.contains('active') ? 'hidden' : 'auto';
         }
+        window.onkeydown = function(e) { if(e.key === "Escape") toggleModal(); };
     </script>
 </body>
 </html>
