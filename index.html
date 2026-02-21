@@ -10,7 +10,6 @@
         html { scroll-behavior: smooth; }
         body { background-color: #020617; color: #ffffff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .serif { font-family: 'Playfair Display', serif; }
-        
         .glass-nav { background: rgba(2, 6, 23, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); height: 90px; display: flex; align-items: center; }
         
         .hero-bg { 
@@ -20,7 +19,7 @@
             background-size: cover; background-position: center; text-align: center;
         }
 
-        /* THE "OVERLAY" FIX */
+        /* THE UNBREAKABLE MODAL */
         #vault-payment-screen { 
             display: none; position: fixed; inset: 0; z-index: 10000; 
             background: rgba(2, 6, 23, 0.98); backdrop-filter: blur(30px); 
@@ -34,16 +33,15 @@
             box-shadow: 0 0 100px rgba(0,0,0,0.9);
         }
         
-        /* THE "X" - REDESIGNED FOR MAX CLICKABILITY */
-        .exit-vault { 
-            position: absolute; top: 20px; right: 30px; font-size: 50px; 
-            color: #4A607D; cursor: pointer; line-height: 1; z-index: 10001; 
-            font-weight: 300; transition: color 0.2s;
-        }
+        .exit-vault { position: absolute; top: 20px; right: 30px; font-size: 50px; color: #4A607D; cursor: pointer; line-height: 1; z-index: 10001; font-weight: 300; }
         .exit-vault:hover { color: #ffffff; }
 
         .btn-navy { background-color: #1B365D; color: white; transition: 0.3s; border-radius: 50px; padding: 1.25rem 2.5rem; font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase; font-size: 11px; text-align: center; display: block; }
         .btn-navy:hover { background-color: #0A1F44; transform: scale(1.02); }
+
+        .intelligence-card { background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(74, 96, 125, 0.2); transition: 0.5s; border-radius: 40px; padding: 3rem; }
+        .intelligence-card:hover { border-color: #4A607D; background: rgba(74, 96, 125, 0.05); }
+        .emerald-glow { color: #34d399; text-shadow: 0 0 10px rgba(52, 211, 153, 0.3); }
     </style>
 </head>
 <body>
@@ -64,47 +62,108 @@
             <span class="text-slate-400 text-xs font-bold tracking-[0.8em] uppercase mb-8 block">Confidential Principal Protocols</span>
             <h1 class="serif text-6xl md:text-9xl mb-8 leading-none italic text-white">The <br><span class="text-slate-400 not-italic font-light">System.</span></h1>
             <p class="text-xl md:text-2xl text-slate-300 font-light mb-12 italic max-w-3xl mx-auto">
-                Deploy the proprietary framework used to pinpoint hidden equity 45 days before the public market awakens.
+                Stop bidding against the crowd. Deploy the proprietary framework used to pinpoint hidden equity 45 days before the public market awakens.
             </p>
-            <button onclick="launchVault()" class="bg-white text-slate-900 px-12 py-5 rounded-full font-bold uppercase tracking-widest text-[10px] hover:bg-slate-200 transition shadow-2xl">Secure Access</button>
+            <div class="flex flex-col md:flex-row gap-6 justify-center">
+                <a href="#comparison" class="btn-navy">Review the Gap</a>
+                <button onclick="launchVault()" class="bg-white text-slate-900 px-12 py-5 rounded-full font-bold uppercase tracking-widest text-[10px] hover:bg-slate-200 transition">Secure Access</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="comparison" class="py-24 px-8 bg-[#020617] border-y border-white/5">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="serif text-4xl md:text-6xl mb-4 italic text-white">The <span class="text-slate-500 not-italic uppercase tracking-tighter">Intelligence Gap</span></h2>
+                <p class="text-slate-500 text-[10px] uppercase tracking-[0.4em]">Proprietary Protocols vs. Retail Inefficiency</p>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse intelligence-card rounded-3xl overflow-hidden">
+                    <thead>
+                        <tr class="border-b border-white/10 bg-white/5 text-[10px] uppercase tracking-widest text-slate-400">
+                            <th class="p-6">Phase</th>
+                            <th class="p-6">The Retail Way</th>
+                            <th class="p-6 text-white font-bold">The System Intel</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr class="border-b border-white/5">
+                            <td class="p-6 font-bold text-slate-300 uppercase text-[10px] tracking-widest">Sourcing</td>
+                            <td class="p-6 text-slate-500 italic">Wait for MLS Alerts</td>
+                            <td class="p-6 emerald-glow font-bold">45-Day Pre-Market Scrape</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="p-6 font-bold text-slate-300 uppercase text-[10px] tracking-widest">Competition</td>
+                            <td class="p-6 text-slate-500 italic">High-Bidding Shark Tanks</td>
+                            <td class="p-6 emerald-glow font-bold">Zero-Competition Direct</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="p-6 font-bold text-slate-300 uppercase text-[10px] tracking-widest">Diligence</td>
+                            <td class="p-6 text-slate-500 italic">Manual Guesswork</td>
+                            <td class="p-6 emerald-glow font-bold">AI Distress Filtering</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-bold text-slate-300 uppercase text-[10px] tracking-widest">Funding</td>
+                            <td class="p-6 text-slate-500 italic">30-Day Bank Wait</td>
+                            <td class="p-6 emerald-glow font-bold">7-Day Priority SCC Capital</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-8">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="intelligence-card">
+                <p class="text-slate-500 font-bold text-[10px] uppercase tracking-widest mb-4 italic underline">Module 01</p>
+                <h4 class="serif text-2xl mb-4 italic text-white">The Scraper</h4>
+                <p class="text-slate-400 text-xs leading-relaxed italic">Direct courthouse data harvesting protocols for FL & CO.</p>
+            </div>
+            <div class="intelligence-card">
+                <p class="text-slate-500 font-bold text-[10px] uppercase tracking-widest mb-4 italic underline">Module 02</p>
+                <h4 class="serif text-2xl mb-4 italic text-white">AI Hunter</h4>
+                <p class="text-slate-400 text-xs leading-relaxed italic">Proprietary distress triggers to rank lead equity potential.</p>
+            </div>
+            <div class="intelligence-card">
+                <p class="text-slate-500 font-bold text-[10px] uppercase tracking-widest mb-4 italic underline">Module 03</p>
+                <h4 class="serif text-2xl mb-4 italic text-white">The Strike</h4>
+                <p class="text-slate-400 text-xs leading-relaxed italic">Institutional scripts to position yourself as the primary solution.</p>
+            </div>
+            <div class="intelligence-card">
+                <p class="text-slate-500 font-bold text-[10px] uppercase tracking-widest mb-4 italic underline">Module 04</p>
+                <h4 class="serif text-2xl mb-4 italic text-white">Capital Window</h4>
+                <p class="text-slate-400 text-xs leading-relaxed italic">Direct priority access to the Summit Coast Capital lending desk.</p>
+            </div>
         </div>
     </section>
 
     <div id="vault-payment-screen" onclick="closeVault()">
         <div class="payment-box" onclick="event.stopPropagation()">
             <div class="exit-vault" onclick="closeVault()">&times;</div>
-            
             <h2 class="serif text-4xl mb-2 text-white italic text-center">Final <span class="text-slate-500 not-italic">Step</span></h2>
             <p class="text-slate-500 text-[10px] uppercase tracking-[0.4em] mb-10 text-center">Authorize Principal Access</p>
-            
             <div class="space-y-5 mb-12 border-y border-white/5 py-10">
                 <div class="flex items-center gap-4"><span class="text-emerald-500">✔</span><p class="text-[13px] text-slate-300 italic">Phase 01-04 Principal Protocols</p></div>
                 <div class="flex items-center gap-4"><span class="text-emerald-500">✔</span><p class="text-[13px] text-slate-300 italic">Institutional Script Library</p></div>
                 <div class="flex items-center gap-4"><span class="text-emerald-400">✔</span><p class="text-[13px] text-slate-300 italic">Priority SCC Capital Window</p></div>
             </div>
-
-            <a href="https://buy.stripe.com/test_5kQeVfc9Z3si23hcYyb7y00" class="btn-navy">Proceed to Stripe ($497)</a>
+            <a href="https://buy.stripe.com/test_5kQeVfc9Z3si23hcYyb7y00" class="btn-navy w-full block text-center">Proceed to Stripe ($497)</a>
             <p class="mt-6 text-[9px] text-slate-600 uppercase tracking-widest text-center">Bank-Grade Secure Checkout</p>
         </div>
     </div>
 
     <script>
         function launchVault() {
-            const screen = document.getElementById('vault-payment-screen');
-            screen.classList.add('show');
+            document.getElementById('vault-payment-screen').classList.add('show');
             document.body.style.overflow = 'hidden';
         }
         function closeVault() {
-            const screen = document.getElementById('vault-payment-screen');
-            screen.classList.remove('show');
+            document.getElementById('vault-payment-screen').classList.remove('show');
             document.body.style.overflow = 'auto';
         }
-        // ESCAPE KEY SUPPORT
-        window.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeVault();
-            }
-        });
+        window.addEventListener('keydown', function(event) { if (event.key === 'Escape') closeVault(); });
     </script>
 
     <footer class="p-20 text-center text-[10px] text-slate-600 uppercase tracking-[0.4em]">© 2026 Summit Coast Intelligence. Proprietary Protocols.</footer>
