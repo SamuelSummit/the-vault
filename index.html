@@ -30,17 +30,16 @@
             box-shadow: 0 0 50px rgba(0,0,0,0.8);
         }
         
-        /* THE "X" */
+        /* THE "X" - NOW LARGER AND GLOWING */
         .close-x { 
-            position: absolute; top: 25px; right: 25px; font-size: 45px; 
+            position: absolute; top: 20px; right: 25px; font-size: 50px; 
             color: #4A607D; cursor: pointer; line-height: 1; z-index: 10001;
+            text-shadow: 0 0 10px rgba(74, 96, 125, 0.5);
         }
         .close-x:hover { color: #ffffff; }
 
         .btn-navy { background-color: #1B365D; color: white; transition: 0.3s; border-radius: 50px; padding: 1.25rem 2.5rem; font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase; font-size: 11px; }
         .btn-navy:hover { background-color: #0A1F44; transform: scale(1.02); }
-        .intelligence-card { background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(74, 96, 125, 0.2); border-radius: 40px; padding: 2.5rem; transition: 0.3s; }
-        .intelligence-card:hover { border-color: #4A607D; background: rgba(74, 96, 125, 0.05); }
     </style>
 </head>
 <body>
@@ -63,9 +62,7 @@
             <p class="text-xl md:text-2xl text-slate-300 font-light mb-12 italic max-w-3xl mx-auto">
                 Deploy the proprietary framework used to pinpoint hidden equity 45 days before the public market awakens.
             </p>
-            <div class="flex flex-col md:flex-row gap-6 justify-center">
-                <button onclick="openModal()" class="bg-white text-slate-900 px-12 py-5 rounded-full font-bold uppercase tracking-widest text-[10px] hover:bg-slate-200 transition shadow-2xl">Secure Access</button>
-            </div>
+            <button onclick="openModal()" class="bg-white text-slate-900 px-12 py-5 rounded-full font-bold uppercase tracking-widest text-[10px] hover:bg-slate-200 transition shadow-2xl">Secure Access</button>
         </div>
     </section>
 
@@ -81,35 +78,10 @@
                 <div class="flex items-center gap-4"><span class="text-emerald-400">✔</span><p class="text-xs text-slate-300 italic">Priority SCC Capital Window</p></div>
             </div>
 
-            <a href="https://buy.stripe.com/test_5kQeVfc9Z3si23hcYyb7y00" class="btn-navy w-full block text-center mb-4">Complete Authorization ($497)</a>
+            <a href="https://buy.stripe.com/test_5kQeVfc9Z3si23hcYyb7y00" class="btn-navy w-full block text-center mb-4">Proceed to Stripe ($497)</a>
             <p class="text-[9px] text-slate-600 uppercase tracking-widest text-center">Bank-Grade Secure Checkout</p>
         </div>
     </div>
-
-    <section class="py-32 px-8">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-6">
-            <div class="intelligence-card">
-                <p class="text-slate-500 font-bold text-[10px] uppercase tracking-widest mb-4">Intel 01</p>
-                <h4 class="serif text-2xl mb-4 italic text-white">The Scraper</h4>
-                <p class="text-slate-400 text-xs leading-relaxed italic">Direct courthouse data harvesting protocols.</p>
-            </div>
-            <div class="intelligence-card">
-                <p class="text-slate-500 font-bold text-[10px] uppercase tracking-widest mb-4">Intel 02</p>
-                <h4 class="serif text-2xl mb-4 italic text-white">AI Hunter</h4>
-                <p class="text-slate-400 text-xs leading-relaxed italic">Proprietary distress triggers for FL/CO.</p>
-            </div>
-            <div class="intelligence-card">
-                <p class="text-slate-500 font-bold text-[10px] uppercase tracking-widest mb-4">Intel 03</p>
-                <h4 class="serif text-2xl mb-4 italic text-white">The Strike</h4>
-                <p class="text-slate-400 text-xs leading-relaxed italic">Institutional scripts for direct-to-seller.</p>
-            </div>
-            <div class="intelligence-card">
-                <p class="text-slate-500 font-bold text-[10px] uppercase tracking-widest mb-4">Intel 04</p>
-                <h4 class="serif text-2xl mb-4 italic text-white">Priority Fund</h4>
-                <p class="text-slate-400 text-xs leading-relaxed italic">Fast-track capital for Vault deals.</p>
-            </div>
-        </div>
-    </section>
 
     <script>
         function openModal() {
