@@ -11,7 +11,7 @@
         body { background-color: #010409; color: #ffffff; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
         .serif { font-family: 'Playfair Display', serif; }
         
-        /* THE BLOOMBERG TICKER - Institutional Speed */
+        /* BLOOMBERG TICKER - Professional Grade */
         .ticker-wrap { background: #0A1F44; border-bottom: 1px solid #1B365D; overflow: hidden; white-space: nowrap; padding: 14px 0; z-index: 60; position: relative; }
         .ticker { display: inline-block; animation: ticker 45s linear infinite; font-size: 9px; font-weight: 800; letter-spacing: 4px; color: #34d399; opacity: 0.9; }
         @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
@@ -20,7 +20,7 @@
         .phase-card { 
             background: rgba(255, 255, 255, 0.02); 
             border: 1px solid rgba(255,255,255,0.05); 
-            border-radius: 4px; transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 2px; transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative; overflow: hidden;
         }
         .phase-card:hover { border-color: #1B365D; transform: scale(1.02); background: rgba(27, 54, 93, 0.05); }
@@ -29,10 +29,11 @@
         .btn-principal { 
             background: #ffffff; color: #010409; padding: 22px 48px; border-radius: 2px; 
             font-weight: 800; text-transform: uppercase; letter-spacing: 4px; font-size: 11px; 
-            transition: 0.3s; border: 1px solid #ffffff;
+            transition: 0.3s; border: 1px solid #ffffff; cursor: pointer;
         }
         .btn-principal:hover { background: transparent; color: #ffffff; }
 
+        /* MODAL */
         #payment-modal { display: none; position: fixed; inset: 0; z-index: 10000; background: rgba(1, 4, 9, 0.99); align-items: center; justify-content: center; padding: 20px; }
         #payment-modal.active { display: flex !important; }
         .modal-box { background: #010409; border: 1px solid #1B365D; width: 100%; max-width: 550px; padding: 4rem 3rem; position: relative; }
@@ -53,41 +54,36 @@
 
     <section class="py-20 flex flex-col items-center text-center px-8">
         <h1 class="serif text-5xl md:text-8xl mb-10 italic uppercase leading-none tracking-tighter">The <span class="text-slate-600 not-italic font-light">Equity Matrix.</span></h1>
-        <p class="text-slate-400 text-lg md:text-xl italic max-w-2xl mb-16 font-light">A proprietary forensic framework designed to identify and fund high-equity distress 45 days before the public market awakens.</p>
+        <p class="text-slate-400 text-lg md:text-xl italic max-w-2xl mb-16 font-light leading-relaxed">A proprietary forensic framework designed to identify and fund high-equity distress 45 days before the public market awakens.</p>
         <button onclick="toggleModal()" class="btn-principal">Secure System Access ($497)</button>
     </section>
 
     <section class="py-24 px-10 max-w-7xl mx-auto">
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
             <div class="phase-card p-10">
                 <div class="phase-number text-white/5">01</div>
                 <h3 class="text-emerald-500 text-[10px] font-bold tracking-[0.6em] mb-6 uppercase">Phase 01 / Harvest</h3>
                 <h2 class="serif text-2xl italic mb-4">The Scraper</h2>
-                <p class="text-slate-500 text-xs leading-loose relative z-10">Direct courthouse API harvesting protocols for FL & CO. We extract raw distress data before it reaches the retail aggregators.</p>
+                <p class="text-slate-500 text-[11px] leading-loose relative z-10">Direct courthouse API harvesting protocols for FL & CO. We extract raw distress data before it reaches retail aggregators.</p>
             </div>
-
             <div class="phase-card p-10">
                 <div class="phase-number">02</div>
                 <h3 class="text-emerald-500 text-[10px] font-bold tracking-[0.6em] mb-6 uppercase">Phase 02 / Refine</h3>
                 <h2 class="serif text-2xl italic mb-4">AI Trigger Logic</h2>
-                <p class="text-slate-500 text-xs leading-loose relative z-10">Our 14-point "Equity Filter." We refine raw courthouse noise into a concentrated list of high-probability distress events.</p>
+                <p class="text-slate-500 text-[11px] leading-loose relative z-10">Our 14-point "Equity Filter." We refine raw courthouse noise into a concentrated list of high-probability distress events.</p>
             </div>
-
             <div class="phase-card p-10">
                 <div class="phase-number">03</div>
                 <h3 class="text-emerald-500 text-[10px] font-bold tracking-[0.6em] mb-6 uppercase">Phase 03 / Strike</h3>
                 <h2 class="serif text-2xl italic mb-4">The Scripts</h2>
-                <p class="text-slate-500 text-xs leading-loose relative z-10">Institutional-grade outreach. "White Knight" positioning scripts designed to convert distress into partnership equity.</p>
+                <p class="text-slate-500 text-[11px] leading-loose relative z-10">Institutional-grade outreach. "White Knight" positioning scripts designed to convert distress into partnership equity.</p>
             </div>
-
             <div class="phase-card p-10 border-emerald-500/30 bg-emerald-500/5">
                 <div class="phase-number">04</div>
                 <h3 class="text-emerald-400 text-[10px] font-bold tracking-[0.6em] mb-6 uppercase">Phase 04 / Capital</h3>
                 <h2 class="serif text-2xl italic mb-4 text-emerald-400">SCC Liquidity</h2>
-                <p class="text-slate-300 text-xs leading-loose italic relative z-10">Direct-line access to the Summit Coast Capital lending desk. If the system identifies the deal, we fund it.</p>
+                <p class="text-slate-300 text-[11px] leading-loose italic relative z-10">Direct-line access to the Summit Coast Capital lending desk. If the system identifies the deal, we fund it.</p>
             </div>
-
         </div>
     </section>
 
@@ -96,24 +92,33 @@
 [Image of the real estate investment life cycle]
 
 
-    <section class="py-20 border-y border-white/5 bg-white/5">
+    <section class="py-24 px-10 max-w-5xl mx-auto">
+        <div class="border border-white/5 p-12 bg-white/5 rounded-sm">
+             <h4 class="text-[10px] text-slate-500 uppercase tracking-[0.8em] mb-12 text-center">Operational Architecture</h4>
+             
+             <p class="text-center text-slate-600 text-[9px] mt-8 uppercase tracking-widest">Forensic Scrape → AI Filter → Direct Strike → Capital Engineering</p>
+        </div>
+    </section>
+
+    <section class="py-20 border-y border-white/5 bg-black">
         <div class="max-w-4xl mx-auto px-10">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div><p class="text-[9px] text-slate-600 uppercase mb-2">Pinellas (FL)</p><p class="text-emerald-500 text-[10px] font-bold">LOCKED</p></div>
-                <div><p class="text-[9px] text-slate-600 uppercase mb-2">Boulder (CO)</p><p class="text-emerald-500 text-[10px] font-bold">LOCKED</p></div>
-                <div><p class="text-[9px] text-slate-600 uppercase mb-2">Denver (CO)</p><p class="text-white text-[10px] font-bold">PENDING (2 Left)</p></div>
-                <div><p class="text-[9px] text-slate-600 uppercase mb-2">Tampa (FL)</p><p class="text-white text-[10px] font-bold">ACTIVE</p></div>
+                <div><p class="text-[9px] text-slate-600 uppercase mb-2">Pinellas (FL)</p><p class="text-emerald-500 text-[10px] font-bold uppercase">Locked</p></div>
+                <div><p class="text-[9px] text-slate-600 uppercase mb-2">Boulder (CO)</p><p class="text-emerald-500 text-[10px] font-bold uppercase">Locked</p></div>
+                <div><p class="text-[9px] text-slate-600 uppercase mb-2">Denver (CO)</p><p class="text-white text-[10px] font-bold uppercase tracking-widest">Pending (2)</p></div>
+                <div><p class="text-[9px] text-slate-600 uppercase mb-2">Tampa (FL)</p><p class="text-white text-[10px] font-bold uppercase tracking-widest">Active</p></div>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 text-center opacity-40">
-        <p class="text-[9px] tracking-[1em] uppercase">Summit Coast Capital Intelligence • v4.0</p>
+    <footer class="py-24 text-center">
+        <button onclick="toggleModal()" class="btn-principal mb-12">Authorize Access ($497)</button>
+        <p class="text-[9px] tracking-[1em] uppercase opacity-40">SCC Intelligence • v4.0</p>
     </footer>
 
     <div id="payment-modal" onclick="toggleModal()">
         <div class="modal-box" onclick="event.stopPropagation()">
-            <span class="absolute top-6 right-8 text-slate-700 text-4xl cursor-pointer" onclick="toggleModal()">&times;</span>
+            <span class="absolute top-6 right-8 text-slate-700 text-4xl cursor-pointer hover:text-white" onclick="toggleModal()">&times;</span>
             <h2 class="serif text-3xl italic text-center mb-8">Authorize <br><span class="text-slate-500 not-italic uppercase text-xl tracking-widest">Principal Access</span></h2>
             <div class="space-y-4 mb-10 border-y border-white/5 py-8">
                 <div class="flex items-center gap-4 text-[10px] tracking-widest text-slate-400 uppercase"><span>✔</span> Phase 01-04 Digital Protocols</div>
@@ -121,6 +126,7 @@
                 <div class="flex items-center gap-4 text-[10px] tracking-widest text-emerald-400 uppercase font-bold"><span>✔</span> Priority Funding Window</div>
             </div>
             <a href="https://buy.stripe.com/test_5kQeVfc9Z3si23hcYyb7y00" class="btn-principal block text-center w-full">Activate System ($497)</a>
+            <p class="text-[8px] text-slate-700 mt-6 text-center uppercase tracking-widest">Redirecting to Secure Intel Portal Upon Completion</p>
         </div>
     </div>
 
