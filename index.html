@@ -3,118 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>THE VAULT | Summit Coast Capital Institutional Intelligence</title>
+    <title>THE VAULT | SCC Institutional Intelligence</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
         
         body { background-color: #050505; color: #e5e5e5; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; margin: 0; }
         .serif { font-family: 'Playfair Display', serif; }
         
-        /* THE TICKER - Subtle & Institutional */
-        .ticker-wrap { background: #000; border-bottom: 1px solid rgba(255,255,255,0.08); overflow: hidden; white-space: nowrap; padding: 12px 0; position: sticky; top: 0; z-index: 100; }
-        .ticker { display: inline-block; animation: ticker 50s linear infinite; font-size: 9px; font-weight: 500; letter-spacing: 3px; color: #888; text-transform: uppercase; }
+        /* TICKER - Tactical Discipline */
+        .ticker-wrap { background: #000; border-bottom: 1px solid rgba(255,255,255,0.05); overflow: hidden; white-space: nowrap; padding: 10px 0; position: sticky; top: 0; z-index: 100; }
+        .ticker { display: inline-block; animation: ticker 60s linear infinite; font-size: 8px; font-weight: 700; letter-spacing: 4px; color: #666; text-transform: uppercase; }
         @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
 
-        /* THE TOMBSTONE LOOK */
-        .tombstone { 
-            border: 1px solid rgba(255,255,255,0.1); 
-            padding: 30px; 
-            background: transparent;
-            transition: 0.3s;
-        }
-        .tombstone:hover { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.02); }
+        /* THE FLUID GRID (Ethan Marcotte Principles) */
+        .system-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; background-color: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.05); }
+        .grid-item { background-color: #050505; padding: 40px; transition: 0.4s; }
+        .grid-item:hover { background-color: #0a0a0a; }
 
-        /* BUTTONS - Understated Authority */
-        .btn-institutional { 
+        /* BUTTONS - Business Problem Solvers */
+        .btn-principal { 
             border: 1px solid #fff; color: #fff; background: transparent; 
-            padding: 18px 32px; font-size: 11px; font-weight: 600; 
-            text-transform: uppercase; letter-spacing: 4px; transition: 0.3s;
-            width: 100%; display: block; text-align: center;
+            padding: 20px 40px; font-size: 10px; font-weight: 800; 
+            text-transform: uppercase; letter-spacing: 5px; transition: 0.3s;
+            width: 100%; max-width: 350px; display: block; margin: 0 auto;
         }
-        .btn-institutional:hover { background: #fff; color: #000; }
+        .btn-principal:hover { background: #fff; color: #000; }
 
-        /* MODAL - Architectural Precision */
-        #payment-modal { display: none; position: fixed; inset: 0; z-index: 10000; background: rgba(0,0,0,0.98); flex-direction: column; padding: 40px 20px; }
+        /* MOBILE OPTIMIZED MODAL */
+        #payment-modal { display: none; position: fixed; inset: 0; z-index: 10000; background: #000; flex-direction: column; padding: 40px 30px; }
         #payment-modal.active { display: flex !important; }
-        .modal-box { width: 100%; max-width: 500px; margin: auto; border: 1px solid rgba(255,255,255,0.1); padding: 40px; position: relative; }
+        .close-trigger { align-self: flex-end; font-size: 40px; color: #444; cursor: pointer; line-height: 0.5; margin-bottom: 40px; }
     </style>
 </head>
 <body>
 
     <div class="ticker-wrap">
         <div class="ticker">
-            FLORIDA DEPLOYMENT: ACTIVE • COLORADO DEPLOYMENT: ACTIVE • SYSTEMIC EQUITY CAPTURE: 42.1% AVG • INSTITUTIONAL LIQUIDITY WINDOW: OPEN
+            SYSTEM STATUS: DEPLOYED • HARVESTING: PINELLAS (FL) / BOULDER (CO) • FORENSIC EQUITY MATCH: ACTIVE • CAPITAL WINDOW: $5M+ LIQUIDITY
         </div>
     </div>
 
-    <nav class="p-8 flex justify-between items-center max-w-7xl mx-auto">
-        <img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="SCC" class="h-8 md:h-12 opacity-90">
-        <div class="text-[8px] uppercase tracking-[0.5em] text-slate-600 font-bold">Principal Terminal</div>
+    <nav class="p-10 flex justify-between items-center max-w-7xl mx-auto">
+        <img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="SCC" class="h-8 md:h-12 grayscale opacity-70">
+        <div class="text-[8px] uppercase tracking-[0.5em] text-slate-700 font-bold">Protocol v4.0</div>
     </nav>
 
-    <header class="py-20 px-8 max-w-4xl mx-auto text-center border-b border-white/5">
-        <h1 class="serif text-5xl md:text-7xl mb-10 italic leading-tight">Investment <br><span class="text-slate-500 not-italic font-light uppercase tracking-tighter">Thesis.</span></h1>
-        <p class="text-slate-400 text-sm md:text-lg font-light leading-relaxed mb-12 max-w-2xl mx-auto uppercase tracking-widest">
-            Identifying and funding high-conviction distress equity through proprietary data-harvesting and asset-based liquidity engineering.
+    <header class="py-20 px-10 text-center max-w-4xl mx-auto">
+        <h1 class="serif text-5xl md:text-8xl mb-8 italic text-white uppercase tracking-tighter leading-none">The <span class="text-slate-600 not-italic font-light">Vault.</span></h1>
+        <p class="text-slate-500 text-xs md:text-sm font-medium leading-loose mb-12 uppercase tracking-[0.5em]">
+            Proprietary Forensic Infrastructure <br> for High-Equity Capture
         </p>
-        <button onclick="toggleModal()" class="btn-institutional max-w-xs mx-auto">Authorize Access ($497)</button>
+        <button onclick="toggleModal()" class="btn-principal">Secure Access ($497)</button>
     </header>
 
-    <main class="py-20 px-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="tombstone">
-            <h4 class="text-[9px] text-slate-600 font-bold tracking-[0.4em] mb-6 uppercase">01 / Harvesting</h4>
-            <h2 class="serif text-2xl italic mb-4">The Scraper</h2>
-            <p class="text-slate-500 text-xs leading-loose font-light italic">Direct-to-source data harvesting from primary courthouse nodes in FL and CO. Zero retail dependency.</p>
+    <section class="max-w-7xl mx-auto system-grid">
+        <div class="grid-item">
+            <h4 class="text-[9px] text-slate-600 font-bold tracking-[0.4em] mb-8 uppercase">01 / Scrape</h4>
+            <h2 class="serif text-2xl italic mb-4">Direct Harvest</h2>
+            <p class="text-slate-500 text-[11px] leading-loose font-light">Courthouse API extraction. Pinpointing probate, tax-deed, and lis pendens data 45 days before retail listing.</p>
         </div>
-        <div class="tombstone">
-            <h4 class="text-[9px] text-slate-600 font-bold tracking-[0.4em] mb-6 uppercase">02 / Refinement</h4>
-            <h2 class="serif text-2xl italic mb-4">Distress Logic</h2>
-            <p class="text-slate-500 text-xs leading-loose font-light italic">Refining raw data through a 14-point equity trigger to identify true market inefficiency.</p>
+        <div class="grid-item">
+            <h4 class="text-[9px] text-slate-600 font-bold tracking-[0.4em] mb-8 uppercase">02 / Filter</h4>
+            <h2 class="serif text-2xl italic mb-4">AI Trigger</h2>
+            <p class="text-slate-500 text-[11px] leading-loose font-light">14-point equity filter. Refining raw noise into concentrated distress events with >40% equity spreads.</p>
         </div>
-        <div class="tombstone">
-            <h4 class="text-[9px] text-slate-600 font-bold tracking-[0.4em] mb-6 uppercase">03 / Position</h4>
+        <div class="grid-item">
+            <h4 class="text-[9px] text-slate-600 font-bold tracking-[0.4em] mb-8 uppercase">03 / Acquire</h4>
             <h2 class="serif text-2xl italic mb-4">The Scripts</h2>
-            <p class="text-slate-500 text-xs leading-loose font-light italic">Institutional-grade positioning to acquire distress assets through principal-to-principal dialogue.</p>
+            <p class="text-slate-500 text-[11px] leading-loose font-light">Institutional positioning. Principal-to-principal dialogue scripts designed to convert distress into equity partnerships.</p>
         </div>
-        <div class="tombstone border-white/30">
-            <h4 class="text-[9px] text-white font-bold tracking-[0.4em] mb-6 uppercase">04 / Deployment</h4>
-            <h2 class="serif text-2xl italic mb-4 text-white">Liquidity</h2>
-            <p class="text-slate-300 text-xs leading-loose font-light italic">Direct access to the SCC lending desk. Capital deployment for deals meeting forensic criteria.</p>
+        <div class="grid-item border-l-0 md:border-l border-white/20 bg-white/[0.02]">
+            <h4 class="text-[9px] text-white font-bold tracking-[0.4em] mb-8 uppercase">04 / Fund</h4>
+            <h2 class="serif text-2xl italic mb-4 text-white uppercase">Liquidity</h2>
+            <p class="text-slate-300 text-[11px] leading-loose italic font-light">Direct priority access to the SCC lending desk. Asset-based capital deployment for Vault-sourced assets.</p>
         </div>
-    </main>
+    </section>
 
     
 
 [Image of the real estate investment life cycle]
 
 
-    <section class="py-20 px-8 bg-white/[0.02] border-y border-white/5">
-        <div class="max-w-4xl mx-auto">
-            <h3 class="text-center text-[10px] text-slate-600 uppercase tracking-[0.8em] mb-16">Recent Intelligence Deployments</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div class="opacity-40"><p class="text-[10px] uppercase mb-1">Pinellas (FL)</p><p class="text-[9px] font-bold text-emerald-500 tracking-widest uppercase italic">Locked</p></div>
-                <div class="opacity-40"><p class="text-[10px] uppercase mb-1">Boulder (CO)</p><p class="text-[9px] font-bold text-emerald-500 tracking-widest uppercase italic">Locked</p></div>
-                <div><p class="text-[10px] uppercase mb-1">Denver (CO)</p><p class="text-[9px] font-bold text-white tracking-widest uppercase italic">Pending (2)</p></div>
-                <div><p class="text-[10px] uppercase mb-1">Tampa (FL)</p><p class="text-[9px] font-bold text-white tracking-widest uppercase italic">Active</p></div>
-            </div>
+    <section class="py-24 border-y border-white/5 text-center">
+        <h3 class="text-[9px] text-slate-700 uppercase tracking-[0.8em] mb-12">Territory Deployment Report</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div><p class="text-[9px] uppercase text-slate-800">Pinellas (FL)</p><p class="text-[8px] font-bold text-emerald-900 tracking-widest uppercase italic mt-1">Locked</p></div>
+            <div><p class="text-[9px] uppercase text-slate-800">Boulder (CO)</p><p class="text-[8px] font-bold text-emerald-900 tracking-widest uppercase italic mt-1">Locked</p></div>
+            <div><p class="text-[9px] uppercase text-white">Denver (CO)</p><p class="text-[8px] font-bold text-white tracking-widest uppercase italic mt-1">Pending (2)</p></div>
+            <div><p class="text-[9px] uppercase text-white">Tampa (FL)</p><p class="text-[8px] font-bold text-white tracking-widest uppercase italic mt-1">Active</p></div>
         </div>
     </section>
 
-    <footer class="py-32 text-center opacity-30">
-        <p class="text-[9px] tracking-[1em] uppercase">Summit Coast Capital • v4.0</p>
+    <footer class="py-32 text-center opacity-20">
+        <p class="text-[8px] tracking-[1.5em] uppercase">Summit Coast Capital Institutional</p>
     </footer>
 
     <div id="payment-modal">
-        <div class="modal-box">
-            <span class="absolute top-6 right-8 text-slate-700 text-4xl cursor-pointer hover:text-white" onclick="toggleModal()">&times;</span>
-            <h2 class="serif text-3xl italic text-center mb-8">Authorize <br><span class="text-slate-500 not-italic uppercase text-xl tracking-widest">Principal Access</span></h2>
-            <div class="space-y-4 mb-10 border-y border-white/5 py-8">
-                <div class="flex items-center gap-4 text-[10px] tracking-widest text-slate-400 uppercase"><span>✔</span> Phase 01-04 Digital Protocols</div>
-                <div class="flex items-center gap-4 text-[10px] tracking-widest text-slate-400 uppercase"><span>✔</span> Institutional Script Library</div>
-                <div class="flex items-center gap-4 text-[10px] tracking-widest text-white uppercase font-bold italic"><span>✔</span> Priority Funding Window</div>
+        <span class="close-trigger" onclick="toggleModal()">&times;</span>
+        <div class="max-w-xs mx-auto text-center mt-12">
+            <h2 class="serif text-4xl italic mb-4">Activate <br><span class="text-slate-600 not-italic uppercase text-xl tracking-widest leading-loose">Protocol.</span></h2>
+            <div class="space-y-6 mb-16 text-left border-y border-white/5 py-12">
+                <div class="flex items-center gap-4 text-[10px] tracking-widest text-slate-500 uppercase"><span>✔</span> Phase 01-04 Digital Protocols</div>
+                <div class="flex items-center gap-4 text-[10px] tracking-widest text-slate-500 uppercase"><span>✔</span> Institutional Script Library</div>
+                <div class="flex items-center gap-4 text-[10px] tracking-widest text-white font-bold italic uppercase"><span>✔</span> Priority Funding Window</div>
             </div>
-            <a href="https://buy.stripe.com/test_5kQeVfc9Z3si23hcYyb7y00" class="btn-institutional">Activate System ($497)</a>
+            <a href="https://buy.stripe.com/test_5kQeVfc9Z3si23hcYyb7y00" class="btn-principal">Proceed ($497)</a>
+            <p class="text-[7px] text-slate-700 mt-10 uppercase tracking-widest italic">Lending subject to asset-based underwriting.</p>
         </div>
     </div>
 
