@@ -4,24 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <title>THE VAULT | Summit Coast Capital Institutional</title>
+    <title>THE VAULT | SCC Institutional Intelligence</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
         
-        /* THE FOUNDATION */
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         body { background-color: #ffffff; color: #1e293b; font-family: 'Inter', sans-serif; margin: 0; -webkit-font-smoothing: antialiased; }
         .serif { font-family: 'Playfair Display', serif; }
 
-        /* DATA TICKER - NEUTRAL SLATE */
-        .data-ticker-bar { background: #0f172a; overflow: hidden; white-space: nowrap; padding: 14px 0; border-bottom: 4px solid #334155; position: sticky; top: 0; z-index: 1000; }
+        /* DATA TICKER */
+        .data-ticker-bar { background: #0f172a; overflow: hidden; white-space: nowrap; padding: 14px 0; border-bottom: 4px solid #1B365D; position: sticky; top: 0; z-index: 1000; }
         .ticker-text { display: inline-block; animation: ticker 45s linear infinite; font-size: 10px; font-weight: 700; letter-spacing: 2px; color: #cbd5e1; text-transform: uppercase; }
         @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
 
-        /* THE MODERN HERO - ARCHITECTURAL OVERLAY */
+        /* THE MODERN HERO - ARCHITECTURAL BACKGROUND */
         .scc-hero-modern { 
             position: relative;
             background: linear-gradient(rgba(27, 54, 93, 0.88), rgba(10, 31, 68, 0.92)), 
@@ -34,45 +33,42 @@
             text-align: center;
         }
 
-        /* MOBILE FIX FOR BACKGROUND IMAGE */
+        /* MOBILE OPTIMIZATION */
         @media (max-width: 768px) {
             .scc-hero-modern { background-attachment: scroll; padding: 100px 20px; }
-            .hero-title { font-size: 3.5rem !important; }
+            .hero-title { font-size: 3.8rem !important; }
         }
 
-        /* INSTITUTIONAL SYSTEM GRID */
-        .system-grid-scc { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; background-color: #e2e8f0; border: 1px solid #e2e8f0; }
+        /* GRID SYSTEM */
+        .system-grid-scc { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; background-color: #f1f5f9; border: 1px solid #e2e8f0; }
         .grid-item-scc { background-color: #ffffff; padding: 48px 40px; transition: 0.4s; position: relative; }
-        .grid-item-scc:hover { background-color: #f8fafc; }
+        .grid-item-scc:hover { background-color: #f8fafc; transform: translateY(-2px); }
 
-        /* BUTTONS - UNDERSTATED WEALTH */
         .btn-scc-onboard { 
             background: #ffffff; color: #1B365D; padding: 22px 50px; 
             font-weight: 800; text-transform: uppercase; letter-spacing: 4px; font-size: 11px;
             border: none; cursor: pointer; transition: 0.3s;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
-        .btn-scc-onboard:hover { background: #f1f5f9; transform: translateY(-2px); }
+        .btn-scc-onboard:hover { background: #f1f5f9; }
 
-        /* SECURE AUTHENTICATION MODAL */
+        /* MODAL */
         #scc-auth-gate { display: none; position: fixed; inset: 0; z-index: 10001; background: rgba(15, 23, 42, 0.96); backdrop-filter: blur(12px); align-items: center; justify-content: center; padding: 20px; }
         #scc-auth-gate.active { display: flex !important; }
         .scc-modal-content { background: white; padding: 60px 40px; width: 100%; max-width: 500px; position: relative; border-top: 10px solid #1B365D; text-align: center; }
-        .close-gate { position: absolute; top: 20px; right: 25px; font-size: 40px; color: #cbd5e1; cursor: pointer; line-height: 0.5; }
-        .close-gate:hover { color: #1B365D; }
     </style>
 </head>
 <body>
 
     <div class="data-ticker-bar">
         <div class="ticker-text">
-            SYSTEM STATUS: ONLINE • HARVESTING: PINELLAS (FL) / BOULDER (CO) • FORENSIC EQUITY MATCH: ACTIVE • CAPITAL WINDOW: $5M+ LIQUIDITY
+            CORE LIQUIDITY WINDOW: $5,000,000+ • DATA HARVESTING: FLORIDA / COLORADO • UNDERWRITING STATUS: ACTIVE • PRINCIPAL TERMINAL ONLINE
         </div>
     </div>
 
-    <nav class="p-8 bg-white flex justify-between items-center max-w-7xl mx-auto border-b border-slate-50">
+    <nav class="p-8 bg-white flex justify-between items-center max-w-7xl mx-auto">
         <img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="Summit Coast Capital" class="h-10 md:h-14">
-        <div class="text-[9px] uppercase tracking-[0.4em] text-slate-400 font-black italic">Principal Access v4.0</div>
+        <div class="text-[9px] uppercase tracking-[0.4em] text-slate-400 font-black italic">Institutional Terminal</div>
     </nav>
 
     <header class="scc-hero-modern">
@@ -85,20 +81,20 @@
         </div>
     </header>
 
-    <section class="max-w-7xl mx-auto system-grid-scc">
+    <main class="max-w-7xl mx-auto system-grid-scc">
         <div class="grid-item-scc">
             <h4 class="text-[#1B365D] text-[10px] font-black tracking-widest mb-10 uppercase italic border-b border-slate-100 pb-4">01 / Harvest</h4>
-            <h2 class="serif text-3xl italic mb-4">Direct Scrape</h2>
+            <h2 class="serif text-2xl italic mb-4">Direct Scrape</h2>
             <p class="text-slate-500 text-xs leading-loose font-light">Automated API extraction from courthouse nodes. We identify high-equity distress 45 days before the retail market.</p>
         </div>
         <div class="grid-item-scc">
             <h4 class="text-[#1B365D] text-[10px] font-black tracking-widest mb-10 uppercase italic border-b border-slate-100 pb-4">02 / Refine</h4>
-            <h2 class="serif text-3xl italic mb-4">AI Verification</h2>
+            <h2 class="serif text-2xl italic mb-4">AI Verification</h2>
             <p class="text-slate-500 text-xs leading-loose font-light">A 14-point proprietary equity logic. We refine raw noise into verified high-conviction investment opportunities.</p>
         </div>
         <div class="grid-item-scc">
             <h4 class="text-[#1B365D] text-[10px] font-black tracking-widest mb-10 uppercase italic border-b border-slate-100 pb-4">03 / Strike</h4>
-            <h2 class="serif text-3xl italic mb-4">The Scripts</h2>
+            <h2 class="serif text-2xl italic mb-4">The Scripts</h2>
             <p class="text-slate-500 text-xs leading-loose font-light">Institutional-grade dialogue frameworks. Positioned for principal-to-principal asset acquisition and control.</p>
         </div>
         <div class="grid-item-scc bg-slate-50 border-b-8 border-[#1B365D]">
@@ -106,7 +102,7 @@
             <h2 class="serif text-3xl italic mb-4 text-[#1B365D]">Capital</h2>
             <p class="text-slate-600 text-xs leading-loose font-bold italic">Direct priority window for SCC asset-based funding. We deploy liquidity into the assets the system identifies.</p>
         </div>
-    </section>
+    </main>
 
     
 
@@ -136,19 +132,14 @@
 
     <div id="scc-auth-gate" onclick="toggleAuthGate()">
         <div class="scc-modal-content" onclick="event.stopPropagation()">
-            <span class="close-gate" onclick="toggleAuthGate()">&times;</span>
+            <span class="absolute top-6 right-8 text-slate-300 text-4xl cursor-pointer hover:text-[#1B365D]" onclick="toggleAuthGate()">&times;</span>
             <h2 class="serif text-4xl italic text-[#1B365D] mb-4">Activate Access.</h2>
-            <p class="text-slate-400 text-[10px] uppercase tracking-widest mb-10 border-b border-slate-100 pb-4">Onboarding Principal Partners</p>
-            
             <div class="space-y-6 mb-12 text-left px-4">
-                <div class="flex items-center gap-4 text-xs font-bold text-slate-500 uppercase tracking-tighter"><span>01</span> Digital Scraper Protocols</div>
-                <div class="flex items-center gap-4 text-xs font-bold text-slate-500 uppercase tracking-tighter"><span>02</span> Institutional Script Library</div>
-                <div class="flex items-center gap-4 text-xs font-bold text-[#1B365D] uppercase tracking-tighter italic"><span>03</span> SCC Priority Funding Desk</div>
+                <div class="flex items-center gap-4 text-xs font-bold text-slate-500 uppercase"><span>01</span> Digital Scraper Protocols</div>
+                <div class="flex items-center gap-4 text-xs font-bold text-slate-500 uppercase"><span>02</span> Institutional Script Library</div>
+                <div class="flex items-center gap-4 text-xs font-bold text-[#1B365D] uppercase italic"><span>03</span> SCC Priority Funding Desk</div>
             </div>
-            
-            <a href="https://buy.stripe.com/test_5kQeVfc9Z3si23hcYyb7y00" class="btn-scc-action w-full block bg-[#1B365D] text-white py-5 font-bold uppercase tracking-widest text-xs hover:bg-[#0f172a] transition">Finalize Authorization ($497)</a>
-            
-            <p class="text-[7px] text-slate-400 mt-10 uppercase tracking-widest italic">Secure 256-bit Encryption Powered by Stripe.</p>
+            <a href="https://buy.stripe.com/test_5kQeVfc9Z3si23hcYyb7y00" class="w-full block bg-[#1B365D] text-white py-5 font-bold uppercase tracking-widest text-xs hover:bg-[#0f172a] transition">Finalize Authorization ($497)</a>
         </div>
     </div>
 
@@ -158,7 +149,6 @@
             m.classList.toggle('active');
             document.body.style.overflow = m.classList.contains('active') ? 'hidden' : 'auto';
         }
-        window.onkeydown = function(e) { if(e.key === "Escape") toggleAuthGate(); };
     </script>
 </body>
 </html>
