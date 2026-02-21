@@ -20,7 +20,7 @@
             background-size: cover; background-position: center; text-align: center;
         }
 
-        /* THE UNBREAKABLE MODAL */
+        /* MODAL FIX */
         #checkout-modal { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(2, 6, 23, 0.98); backdrop-filter: blur(25px); align-items: center; justify-content: center; padding: 20px; }
         #checkout-modal.active { display: flex !important; }
         
@@ -30,17 +30,17 @@
             box-shadow: 0 0 50px rgba(0,0,0,0.8);
         }
         
-        /* HIGH-CONTRAST X BUTTON */
+        /* THE "X" */
         .close-x { 
-            position: absolute; top: 30px; right: 30px; font-size: 40px; 
-            color: #4A607D; cursor: pointer; line-height: 0.5; z-index: 10001;
-            transition: color 0.3s;
+            position: absolute; top: 25px; right: 25px; font-size: 45px; 
+            color: #4A607D; cursor: pointer; line-height: 1; z-index: 10001;
         }
         .close-x:hover { color: #ffffff; }
 
         .btn-navy { background-color: #1B365D; color: white; transition: 0.3s; border-radius: 50px; padding: 1.25rem 2.5rem; font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase; font-size: 11px; }
         .btn-navy:hover { background-color: #0A1F44; transform: scale(1.02); }
-        .intelligence-card { background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(74, 96, 125, 0.2); border-radius: 40px; padding: 2.5rem; }
+        .intelligence-card { background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(74, 96, 125, 0.2); border-radius: 40px; padding: 2.5rem; transition: 0.3s; }
+        .intelligence-card:hover { border-color: #4A607D; background: rgba(74, 96, 125, 0.05); }
     </style>
 </head>
 <body>
@@ -81,7 +81,7 @@
                 <div class="flex items-center gap-4"><span class="text-emerald-400">✔</span><p class="text-xs text-slate-300 italic">Priority SCC Capital Window</p></div>
             </div>
 
-            <a href="https://buy.stripe.com/test_5kQeVfc9Z3si23hcYyb7y00" class="btn-navy w-full block text-center mb-4">Proceed to Stripe ($997)</a>
+            <a href="https://buy.stripe.com/test_5kQeVfc9Z3si23hcYyb7y00" class="btn-navy w-full block text-center mb-4">Complete Authorization ($497)</a>
             <p class="text-[9px] text-slate-600 uppercase tracking-widest text-center">Bank-Grade Secure Checkout</p>
         </div>
     </div>
@@ -113,13 +113,11 @@
 
     <script>
         function openModal() {
-            const m = document.getElementById('checkout-modal');
-            m.classList.add('active');
+            document.getElementById('checkout-modal').classList.add('active');
             document.body.style.overflow = 'hidden';
         }
         function closeModal() {
-            const m = document.getElementById('checkout-modal');
-            m.classList.remove('active');
+            document.getElementById('checkout-modal').classList.remove('active');
             document.body.style.overflow = 'auto';
         }
     </script>
