@@ -3,135 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>THE VAULT | Summit Coast Capital Institutional</title>
+    <title>THE VAULT | SCC Institutional Intelligence</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
         
-        /* THE BLUEPRINT */
-        body { background-color: #f1f5f9; color: #0f172a; font-family: 'Inter', sans-serif; margin: 0; }
+        body { background-color: #ffffff; color: #1e293b; font-family: 'Inter', sans-serif; margin: 0; }
         .serif { font-family: 'Playfair Display', serif; }
         
-        /* NAVY HERO SECTION */
-        .scc-hero { 
+        /* THE SCC NAVY HERO */
+        .scc-header-block { 
             background: #1B365D;
             color: white;
-            padding: 80px 24px;
+            padding: 100px 24px;
             text-align: center;
-            border-bottom: 6px solid #475569;
         }
 
-        /* DATA TICKER - NEUTRAL SLATE */
-        .ticker-wrap { background: #0f172a; overflow: hidden; white-space: nowrap; padding: 12px 0; }
-        .ticker { display: inline-block; animation: ticker 45s linear infinite; font-size: 10px; font-weight: 700; letter-spacing: 2px; color: #94a3b8; text-transform: uppercase; }
+        /* DATA TICKER - PROFESSIONAL SLATE */
+        .data-ticker-bar { background: #0f172a; overflow: hidden; white-space: nowrap; padding: 14px 0; border-bottom: 4px solid #334155; }
+        .ticker-text { display: inline-block; animation: ticker 45s linear infinite; font-size: 10px; font-weight: 700; letter-spacing: 2px; color: #cbd5e1; text-transform: uppercase; }
         @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
 
-        /* THE PROTOCOL CARDS */
-        .vault-card { 
-            background: white; 
+        /* THE PROFESSIONAL CARDS */
+        .intel-card-blue { 
+            background: #f8fafc; 
             border: 1px solid #e2e8f0; 
-            padding: 40px;
-            transition: 0.3s ease;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            padding: 45px 35px;
+            transition: 0.4s ease;
+            position: relative;
         }
-        .vault-card:hover { border-color: #1B365D; transform: translateY(-3px); }
+        .intel-card-blue:hover { border-color: #1B365D; transform: translateY(-5px); background: white; box-shadow: 0 20px 40px rgba(27, 54, 93, 0.1); }
+        .phase-indicator { color: #1B365D; font-weight: 900; font-size: 10px; letter-spacing: 3px; margin-bottom: 20px; display: block; border-bottom: 1px solid #1B365D; padding-bottom: 8px; width: fit-content; }
 
-        /* NAVY BUTTONS */
-        .btn-vault { 
-            background: #1B365D; color: white; padding: 20px 40px; 
-            font-weight: 800; text-transform: uppercase; letter-spacing: 3px; font-size: 12px;
-            border: none; cursor: pointer; display: block; width: 100%; text-align: center;
+        /* NAVY ACTION BUTTON */
+        .btn-scc-action { 
+            background: #1B365D; color: white; padding: 22px 50px; 
+            font-weight: 800; text-transform: uppercase; letter-spacing: 4px; font-size: 12px;
+            border: none; cursor: pointer; transition: 0.3s;
         }
-        .btn-vault:hover { background: #0A1F44; }
+        .btn-scc-action:hover { background: #0f172a; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
         /* MODAL */
-        #auth-gate { display: none; position: fixed; inset: 0; z-index: 10000; background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); align-items: center; justify-content: center; padding: 20px; }
-        #auth-gate.active { display: flex !important; }
-        .modal-container { background: white; padding: 50px 30px; width: 100%; max-width: 500px; position: relative; border-top: 8px solid #1B365D; }
+        #scc-gate { display: none; position: fixed; inset: 0; z-index: 10000; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(12px); align-items: center; justify-content: center; padding: 20px; }
+        #scc-gate.active { display: flex !important; }
+        .scc-modal-box { background: white; padding: 60px 40px; width: 100%; max-width: 500px; position: relative; border-top: 10px solid #1B365D; text-align: center; }
     </style>
 </head>
 <body>
 
-    <div class="ticker-wrap">
-        <div class="ticker">
-            SYSTEM STATUS: ONLINE • HARVESTING: PINELLAS (FL) / BOULDER (CO) • FORENSIC EQUITY MATCH: ACTIVE • CAPITAL WINDOW: $5,000,000+
+    <div class="data-ticker-bar">
+        <div class="ticker-text">
+            INTELLIGENCE STATUS: OPERATIONAL • ASSET FOCUS: DISTRESS EQUITY • TERRITORIES: FL / CO • CAPITAL DEPLOYMENT WINDOW: ACTIVE
         </div>
     </div>
 
     <nav class="p-8 bg-white flex justify-between items-center max-w-7xl mx-auto">
-        <img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="Summit Coast Capital" class="h-10 md:h-12">
-        <div class="text-[9px] uppercase tracking-[0.3em] text-slate-400 font-bold italic">Institutional Terminal</div>
+        <img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="Summit Coast Capital" class="h-10 md:h-14">
+        <div class="text-[9px] uppercase tracking-[0.4em] text-slate-400 font-black">Principal Access v4.0</div>
     </nav>
 
-    <header class="scc-hero">
+    <header class="scc-header-block">
         <div class="max-w-4xl mx-auto">
-            <h1 class="serif text-6xl md:text-9xl mb-8 italic uppercase leading-none tracking-tighter">The Vault.</h1>
-            <p class="text-slate-300 text-sm md:text-xl font-light leading-relaxed mb-12 uppercase tracking-[0.5em]">
+            <h1 class="serif text-6xl md:text-9xl mb-8 italic leading-none">The Vault.</h1>
+            <p class="text-slate-300 text-sm md:text-xl font-light mb-14 uppercase tracking-[0.6em]">
                 Forensic Intelligence & Private Liquidity
             </p>
-            <button onclick="toggleGate()" class="bg-white text-[#1B365D] px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-slate-200 transition">Authorize Access ($497)</button>
+            <button onclick="toggleSccGate()" class="bg-white text-[#1B365D] px-14 py-6 font-bold uppercase tracking-widest text-xs hover:bg-slate-200 transition shadow-2xl">Authorize Access ($497)</button>
         </div>
     </header>
 
-    <main class="py-24 px-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="vault-card">
-            <h4 class="text-[#1B365D] text-[10px] font-black tracking-widest mb-8 uppercase italic border-b border-slate-100 pb-4">01 / Harvest</h4>
+    <main class="py-24 px-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="intel-card-blue">
+            <span class="phase-indicator uppercase">01 / Harvest</span>
             <h2 class="serif text-2xl italic mb-4">The Scraper</h2>
-            <p class="text-slate-500 text-xs leading-loose font-light">Direct courthouse API harvesting for Florida and Colorado. Pinpoint high-equity distress at the source.</p>
+            <p class="text-slate-500 text-xs leading-loose">Automated API extraction from courthouse nodes. We capture high-equity data 45 days before the retail market.</p>
         </div>
-        <div class="vault-card">
-            <h4 class="text-[#1B365D] text-[10px] font-black tracking-widest mb-8 uppercase italic border-b border-slate-100 pb-4">02 / Refine</h4>
+        <div class="intel-card-blue">
+            <span class="phase-indicator uppercase">02 / Refine</span>
             <h2 class="serif text-2xl italic mb-4">The Filter</h2>
-            <p class="text-slate-500 text-xs leading-loose font-light">A 14-point equity logic filter designed to identify high-conviction distress before market exposure.</p>
+            <p class="text-slate-500 text-xs leading-loose">A 14-point proprietary equity logic. We refine raw noise into verified high-conviction investment opportunities.</p>
         </div>
-        <div class="vault-card">
-            <h4 class="text-[#1B365D] text-[10px] font-black tracking-widest mb-8 uppercase italic border-b border-slate-100 pb-4">03 / Strike</h4>
+        <div class="intel-card-blue">
+            <span class="phase-indicator uppercase">03 / Strike</span>
             <h2 class="serif text-2xl italic mb-4">The Scripts</h2>
-            <p class="text-slate-500 text-xs leading-loose font-light">Institutional-grade dialogue frameworks designed for principal-to-principal asset acquisition.</p>
+            <p class="text-slate-500 text-xs leading-loose">Institutional-grade dialogue frameworks. Positioned for principal-to-principal asset acquisition.</p>
         </div>
-        <div class="vault-card bg-slate-50 border-[#1B365D]/20">
-            <h4 class="text-[#1B365D] text-[10px] font-black tracking-widest mb-8 uppercase italic border-b border-slate-200 pb-4">04 / Fund</h4>
-            <h2 class="serif text-2xl italic mb-4 text-[#1B365D]">Capital</h2>
-            <p class="text-slate-600 text-xs leading-loose font-light italic">Direct priority access to the SCC lending desk for 7-day asset-based funding on Vault deals.</p>
+        <div class="intel-card-blue border-b-8 border-[#1B365D]">
+            <span class="phase-indicator uppercase">04 / Fund</span>
+            <h2 class="serif text-2xl italic mb-4 text-[#1B365D]">The Capital</h2>
+            <p class="text-slate-600 text-xs leading-loose font-bold italic">Direct priority window for SCC asset-based funding. We deploy capital into the deals the system identifies.</p>
         </div>
     </main>
 
-    <section class="py-24 bg-white border-y border-slate-200">
+    <section class="py-24 bg-slate-50 border-y border-slate-200">
         <div class="max-w-4xl mx-auto px-8 text-center">
-            <h3 class="text-[10px] text-slate-400 uppercase tracking-[0.8em] mb-12 font-bold">Strategic Architecture</h3>
+            <h3 class="text-[10px] text-slate-400 uppercase tracking-[1em] mb-12 font-black">Institutional Architecture</h3>
             
+            <p class="mt-12 text-slate-400 text-[10px] uppercase tracking-widest italic">From raw courthouse data to closed capital deployments.</p>
         </div>
     </section>
 
-    <section class="py-20 bg-slate-50 text-center">
-        <div class="max-w-4xl mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div><p class="text-[9px] text-slate-400 uppercase mb-2">Pinellas (FL)</p><p class="text-[#1B365D] font-bold text-[10px] uppercase tracking-widest italic">Locked</p></div>
-            <div><p class="text-[9px] text-slate-400 uppercase mb-2">Boulder (CO)</p><p class="text-[#1B365D] font-bold text-[10px] uppercase tracking-widest italic">Locked</p></div>
-            <div><p class="text-[9px] text-slate-400 uppercase mb-2">Denver (CO)</p><p class="text-[#1B365D] font-bold text-[10px] uppercase tracking-widest">Active</p></div>
-            <div><p class="text-[9px] text-slate-400 uppercase mb-2">Tampa (FL)</p><p class="text-[#1B365D] font-bold text-[10px] uppercase tracking-widest">Active</p></div>
+    <section class="py-20 bg-white text-center">
+        <div class="max-w-5xl mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div><p class="text-[10px] text-slate-400 uppercase mb-2">Pinellas (FL)</p><p class="text-[#1B365D] font-black text-xs uppercase tracking-[0.2em] italic">Locked</p></div>
+            <div><p class="text-[10px] text-slate-400 uppercase mb-2">Boulder (CO)</p><p class="text-[#1B365D] font-black text-xs uppercase tracking-[0.2em] italic">Locked</p></div>
+            <div><p class="text-[10px] text-slate-400 uppercase mb-2">Denver (CO)</p><p class="text-[#1B365D] font-black text-xs uppercase tracking-[0.2em]">Active</p></div>
+            <div><p class="text-[10px] text-slate-400 uppercase mb-2">Tampa (FL)</p><p class="text-[#1B365D] font-black text-xs uppercase tracking-[0.2em]">Active</p></div>
         </div>
     </section>
 
     <footer class="py-24 text-center opacity-40">
-        <p class="text-[9px] tracking-[1em] uppercase text-[#1B365D]">Summit Coast Capital • v4.0</p>
+        <p class="text-[9px] tracking-[1.5em] uppercase text-[#1B365D] font-bold">Summit Coast Capital • Principal Terminal</p>
     </footer>
 
-    <div id="auth-gate" onclick="toggleGate()">
-        <div class="modal-container" onclick="event.stopPropagation()">
-            <span class="absolute top-6 right-8 text-slate-300 text-4xl cursor-pointer hover:text-[#1B365D]" onclick="toggleGate()">&times;</span>
-            <h2 class="serif text-3xl italic text-[#1B365D] mb-8 text-center uppercase tracking-tighter">Authorize Access</h2>
-            <div class="space-y-4 mb-10 border-y border-slate-100 py-10 text-left">
-                <div class="flex items-center gap-4 text-xs tracking-widest text-slate-500 uppercase"><span>✔</span> Phase 01-04 Digital Protocols</div>
-                <div class="flex items-center gap-4 text-xs tracking-widest text-slate-500 uppercase"><span>✔</span> Institutional Script Library</div>
-                <div class="flex items-center gap-4 text-xs tracking-widest text-[#1B365D] font-bold uppercase italic"><span>✔</span> Priority Funding Window</div>
+    <div id="scc-gate" onclick="toggleSccGate()">
+        <div class="scc-modal-box" onclick="event.stopPropagation()">
+            <span class="absolute top-6 right-8 text-slate-300 text-4xl cursor-pointer hover:text-[#1B365D]" onclick="toggleSccGate()">&times;</span>
+            <h2 class="serif text-4xl italic text-[#1B365D] mb-4">Activate Access.</h2>
+            <p class="text-slate-400 text-[10px] uppercase tracking-widest mb-10 border-b border-slate-100 pb-4">Onboarding Principal Partners</p>
+            <div class="space-y-6 mb-12 text-left px-4">
+                <div class="flex items-center gap-4 text-xs font-bold text-slate-500 uppercase tracking-tighter"><span>01</span> Digital Scraper Protocols</div>
+                <div class="flex items-center gap-4 text-xs font-bold text-slate-500 uppercase tracking-tighter"><span>02</span> Institutional Script Library</div>
+                <div class="flex items-center gap-4 text-xs font-bold text-[#1B365D] uppercase tracking-tighter italic"><span>03</span> SCC Priority Funding Desk</div>
             </div>
-            <a href="https://buy.stripe.com/test_5kQeVfc9Z3si23hcYyb7y00" class="btn-vault">Activate Principal Account ($497)</a>
+            <a href="https://buy.stripe.com/test_5kQeVfc9Z3si23hcYyb7y00" class="btn-scc-action w-full block">Proceed to Stripe ($497)</a>
+            <p class="text-[7px] text-slate-400 mt-10 uppercase tracking-widest italic">Secure Authentication Powered by Stripe.</p>
         </div>
     </div>
 
     <script>
-        function toggleGate() {
-            const m = document.getElementById('auth-gate');
+        function toggleSccGate() {
+            const m = document.getElementById('scc-gate');
             m.classList.toggle('active');
             document.body.style.overflow = m.classList.contains('active') ? 'hidden' : 'auto';
         }
