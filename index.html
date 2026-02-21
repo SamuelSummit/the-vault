@@ -1,3 +1,11 @@
+No, definitely do not replace the entire file with that snippet! That would break the page because it’s missing the "head" (the styles) and the "footer."
+
+To make this easy, I have combined everything—the Navy branding, the Luxury Mansion, the 4 Intelligence Pillars, and that new "Retail vs. Vault" Comparison Table—into one complete, finished file.
+
+The "Full Asset" Vault Code
+Copy and replace the entire index.html in your the-vault repository with this:
+
+HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,37 +20,25 @@
         .serif { font-family: 'Playfair Display', serif; }
         .glass-nav { background: rgba(2, 6, 23, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
         
-        /* THE "WOW" BACKGROUND */
         .hero-bg { 
             background: linear-gradient(rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 1)), 
             url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80'); 
             background-size: cover; background-position: center;
         }
 
-        /* DATA GLOW EFFECT */
         .intelligence-card { 
             background: rgba(255, 255, 255, 0.01); 
             border: 1px solid rgba(74, 96, 125, 0.2); 
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative; overflow: hidden;
         }
         .intelligence-card:hover { 
             border-color: #4A607D; 
             background: rgba(74, 96, 125, 0.05); 
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            transform: translateY(-5px);
         }
-        .intelligence-card::before {
-            content: ""; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
-            transition: 0.5s;
-        }
-        .intelligence-card:hover::before { left: 100%; }
 
-        .btn-gold { background: #1B365D; color: white; border: 1px solid #4A607D; transition: 0.3s; }
-        .btn-gold:hover { background: white; color: #020617; box-shadow: 0 0 20px rgba(255,255,255,0.2); }
-        
-        .counter-glow { text-shadow: 0 0 15px rgba(74, 96, 125, 0.8); }
+        .btn-navy { background-color: #1B365D; color: white; transition: all 0.3s; border-radius: 50px; }
+        .btn-navy:hover { background-color: #0A1F44; transform: scale(1.05); }
     </style>
 </head>
 <body>
@@ -60,105 +56,98 @@
 
     <section class="hero-bg min-h-screen flex items-center justify-center pt-24 px-6 text-center">
         <div class="max-w-4xl">
-            <span class="text-slate-400 text-xs font-bold tracking-[0.8em] uppercase mb-8 block opacity-80">Access Restricted to Principal Partners Only</span>
+            <span class="text-slate-400 text-xs font-bold tracking-[0.8em] uppercase mb-8 block">Access Restricted to Principal Partners Only</span>
             <h1 class="serif text-6xl md:text-9xl mb-8 leading-none italic text-white">Forensic <br><span class="text-slate-400 not-italic font-light">Intelligence.</span></h1>
             <p class="text-xl md:text-2xl text-slate-300 font-light mb-12 italic max-w-3xl mx-auto">
-                Stop bidding against the crowd. Deploy the proprietary framework Samuel Salankey uses to pinpoint hidden equity 45 days before the public market awakens.
+                Deploy the proprietary framework Samuel Salankey uses to pinpoint hidden equity 45 days before the public market awakens.
             </p>
             <div class="flex flex-col md:flex-row gap-6 justify-center">
-                <a href="#intel" class="btn-gold px-12 py-5 font-bold uppercase tracking-widest text-[10px] inline-block">Declassify the System</a>
-                <div class="flex items-center justify-center gap-4 px-6 py-4 border border-white/5 bg-white/5 rounded-full backdrop-blur-sm">
-                    <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-                    <span class="text-[10px] uppercase tracking-widest text-slate-400">System Live: FL // CO Data Scrape Active</span>
-                </div>
+                <a href="#syllabus" class="btn-navy px-12 py-5 font-bold uppercase tracking-widest text-[10px] inline-block">Declassify the System</a>
             </div>
         </div>
     </section>
 
-    <section id="intel" class="py-32 px-8">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-20 items-center mb-32">
-                <div>
-                    <h2 class="serif text-5xl md:text-7xl mb-8 italic">The <span class="not-italic text-slate-500">Unfair Advantage.</span></h2>
-                    <p class="text-slate-400 text-lg leading-relaxed font-light mb-8">
-                        Most investors wait for a Zillow alert. In the Vault, we teach you to <strong>scout the crisis</strong> at the courthouse level. This is the exact playbook used to navigate the REO fallout of 2008—refined with modern AI to find the needle in the data haystack.
-                    </p>
-                    <div class="grid grid-cols-2 gap-8 text-left">
-                        <div>
-                            <p class="text-3xl serif italic text-white counter-glow">$500M+</p>
-                            <p class="text-[9px] uppercase tracking-widest text-slate-500 font-bold">Volume Engineered</p>
-                        </div>
-                        <div>
-                            <p class="text-3xl serif italic text-white counter-glow">18 Yrs</p>
-                            <p class="text-[9px] uppercase tracking-widest text-slate-500 font-bold">Street Experience</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="intelligence-card p-12 rounded-[50px] border-slate-500/30 bg-slate-500/5">
-                    <h3 class="serif text-3xl mb-6 text-white italic">"Shadow Inventory"</h3>
-                    <p class="text-slate-400 text-sm italic mb-8">
-                        There are currently thousands of properties in Florida and Colorado with 40%+ equity, owned by sellers facing a trigger event they haven't realized yet. 
-                    </p>
-                    <div class="space-y-4">
-                        <div class="p-4 bg-white/5 border border-white/10 rounded-xl flex justify-between">
-                            <span class="text-[10px] uppercase tracking-widest text-slate-300">Data Latency</span>
-                            <span class="text-[10px] uppercase tracking-widest text-emerald-400">0.00ms</span>
-                        </div>
-                        <div class="p-4 bg-white/5 border border-white/10 rounded-xl flex justify-between">
-                            <span class="text-[10px] uppercase tracking-widest text-slate-300">Market Pre-Visibility</span>
-                            <span class="text-[10px] uppercase tracking-widest text-white">30-45 Days</span>
-                        </div>
-                    </div>
-                </div>
+    <section class="py-24 px-8 bg-[#020617] border-y border-white/5">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="serif text-4xl md:text-6xl mb-4 italic">The <span class="text-slate-500 not-italic">Intelligence Gap</span></h2>
+                <p class="text-slate-500 text-[10px] uppercase tracking-[0.4em]">Why 95% of Investors Settle for Scraps</p>
             </div>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse intelligence-card rounded-3xl overflow-hidden">
+                    <thead>
+                        <tr class="border-b border-white/10 bg-white/5 text-[10px] uppercase tracking-widest text-slate-400">
+                            <th class="p-6">Strategy Phase</th>
+                            <th class="p-6">The Retail Way</th>
+                            <th class="p-6 text-white">The Vault Intelligence</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr class="border-b border-white/5">
+                            <td class="p-6 font-bold text-slate-300 uppercase text-[10px] tracking-widest">Lead Sourcing</td>
+                            <td class="p-6 text-slate-500 italic">Wait for Zillow/MLS Alerts</td>
+                            <td class="p-6 text-emerald-400 font-bold">45-Day Pre-Market Scrape</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="p-6 font-bold text-slate-300 uppercase text-[10px] tracking-widest">Competition</td>
+                            <td class="p-6 text-slate-500 italic">High-Bidding "Shark Tanks"</td>
+                            <td class="p-6 text-emerald-400 font-bold">Zero-Competition Direct-Seller</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="p-6 font-bold text-slate-300 uppercase text-[10px] tracking-widest">Due Diligence</td>
+                            <td class="p-6 text-slate-500 italic">Manual Spreadsheet Guessing</td>
+                            <td class="p-6 text-emerald-400 font-bold">AI Distress-Trigger Analysis</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6 font-bold text-slate-300 uppercase text-[10px] tracking-widest">Funding Speed</td>
+                            <td class="p-6 text-slate-500 italic">30-Day Bank Underwriting</td>
+                            <td class="p-6 text-emerald-400 font-bold">7-Day Priority SCC Funding</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 
+    <section id="syllabus" class="py-32 px-8">
+        <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-4 gap-6">
                 <div class="intelligence-card p-10 rounded-[40px]">
                     <p class="text-slate-500 font-bold text-[10px] uppercase tracking-widest mb-4">Intel 01</p>
-                    <h4 class="serif text-2xl mb-4 italic">The Scraper</h4>
+                    <h4 class="serif text-2xl mb-4 italic text-white">The Scraper</h4>
                     <p class="text-slate-400 text-xs leading-relaxed italic">Direct courthouse data harvesting protocols to bypass retail middlemen.</p>
                 </div>
                 <div class="intelligence-card p-10 rounded-[40px]">
                     <p class="text-slate-500 font-bold text-[10px] uppercase tracking-widest mb-4">Intel 02</p>
-                    <h4 class="serif text-2xl mb-4 italic">The AI Hunter</h4>
+                    <h4 class="serif text-2xl mb-4 italic text-white">The AI Hunter</h4>
                     <p class="text-slate-400 text-xs leading-relaxed italic">14 proprietary distress triggers used to rank leads by "Likelihood of Sale."</p>
                 </div>
                 <div class="intelligence-card p-10 rounded-[40px]">
                     <p class="text-slate-500 font-bold text-[10px] uppercase tracking-widest mb-4">Intel 03</p>
-                    <h4 class="serif text-2xl mb-4 italic">White Knight</h4>
-                    <p class="text-slate-400 text-xs leading-relaxed italic">Consultant-based scripts that get homeowners to hand you the keys with a smile.</p>
+                    <h4 class="serif text-2xl mb-4 italic text-white">White Knight</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed italic">Consultant-based scripts that position you as a solution, not a predator.</p>
                 </div>
                 <div class="intelligence-card p-10 rounded-[40px]">
                     <p class="text-slate-500 font-bold text-[10px] uppercase tracking-widest mb-4">Intel 04</p>
-                    <h4 class="serif text-2xl mb-4 italic">SCC Funding</h4>
-                    <p class="text-slate-400 text-xs leading-relaxed italic">The final key. Priority access to the capital required to strike in 7 days.</p>
+                    <h4 class="serif text-2xl mb-4 italic text-white">SCC Capital</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed italic">Priority access to the capital required to strike in 7 days or less.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="py-32 px-8 bg-[#1B365D]/10 border-y border-white/5 text-center">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="serif text-5xl md:text-7xl mb-8 italic">The Door is <span class="text-slate-400 not-italic">Closing.</span></h2>
-            <p class="text-slate-300 text-xl mb-12 font-light italic">
-                We do not train competitors. To protect the equity of our current Vault members, access is limited by market territory. 
-            </p>
-            <div class="inline-block p-1 border border-white/10 rounded-full mb-12">
-                <div class="bg-white/5 px-8 py-3 rounded-full flex items-center gap-4">
-                    <span class="text-[10px] uppercase tracking-widest text-slate-400">Vetting Process:</span>
-                    <span class="text-[10px] uppercase tracking-widest text-white font-bold italic">High Intensity</span>
-                </div>
-            </div>
-            <br>
-            <a href="mailto:Samuel@summitcoastcapital.com?subject=Vault%20Onboarding%20Request" 
-               class="bg-white text-[#020617] px-12 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-slate-200 transition inline-block transform hover:scale-105 shadow-[0_0_30px_rgba(255,255,255,0.1)]">
-                Request Onboarding Call
-            </a>
-        </div>
+        <h2 class="serif text-5xl md:text-7xl mb-8 italic text-white">The Door is <span class="text-slate-400 not-italic">Closing.</span></h2>
+        <p class="text-slate-300 text-xl mb-12 max-w-2xl mx-auto font-light">Access is limited by market territory to protect deal equity for current members.</p>
+        <a href="mailto:Samuel@summitcoastcapital.com?subject=Vault%20Onboarding%20Request" 
+           class="bg-white text-[#020617] px-12 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-slate-200 transition inline-block transform hover:scale-105">
+            Request Onboarding Call
+        </a>
     </section>
 
     <footer class="p-20 text-center text-[10px] text-slate-600 uppercase tracking-[0.4em]">
-        © 2026 Summit Coast Intelligence. Privileged Information. Principal: Samuel Salankey.
+        © 2026 Summit Coast Intelligence. Principal: Samuel Salankey.
     </footer>
 
 </body>
