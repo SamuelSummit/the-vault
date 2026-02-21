@@ -3,91 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>THE VAULT | Summit Coast Capital Institutional Terminal</title>
+    <title>THE VAULT | SCC Institutional Intelligence</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
         
         body { background-color: #050505; color: #f8fafc; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; margin: 0; }
         .serif { font-family: 'Playfair Display', serif; }
         
-        /* TICKER - Institutional Intelligence Stream */
+        /* TICKER - Institutional Stream */
         .ticker-wrap { background: #000; border-bottom: 1px solid rgba(255,255,255,0.05); overflow: hidden; white-space: nowrap; padding: 12px 0; position: sticky; top: 0; z-index: 100; }
         .ticker { display: inline-block; animation: ticker 60s linear infinite; font-size: 8px; font-weight: 700; letter-spacing: 4px; color: #475569; text-transform: uppercase; }
         @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
 
-        /* THE JPMORGAN AESTHETIC - Clean, Hard Borders, High-End Spacing */
-        .segment-card { 
-            border: 1px solid rgba(255,255,255,0.08); 
-            padding: 48px; background: transparent; transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            display: flex; flex-direction: column; justify-content: space-between;
+        /* THE JPMORGAN AESTHETIC - Fluid Grid */
+        .system-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; background-color: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.05); }
+        .grid-item { background-color: #050505; padding: 48px 40px; transition: 0.4s; position: relative; overflow: hidden; }
+        
+        /* BUTTONS - Principal Onboarding */
+        .btn-principal { 
+            border: 1px solid #fff; color: #fff; background: transparent; 
+            padding: 22px 40px; font-size: 10px; font-weight: 800; 
+            text-transform: uppercase; letter-spacing: 5px; transition: 0.3s;
+            width: 100%; max-width: 350px; display: block; margin: 0 auto;
         }
-        .segment-card:hover { border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.01); }
+        .btn-principal:hover { background: #fff; color: #000; }
 
-        /* BUTTONS - Revolut-Style Mobile Performance */
-        .btn-onboard { 
-            background: #ffffff; color: #000; padding: 22px 40px; border-radius: 4px; 
-            font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 4px; 
-            transition: 0.3s; width: 100%; text-align: center; display: block;
-        }
-        .btn-onboard:hover { background: #cbd5e1; transform: translateY(-2px); }
-
-        /* MODAL - Bank Vault Security */
-        #auth-modal { display: none; position: fixed; inset: 0; z-index: 10000; background: #000; padding: 40px 24px; align-items: center; justify-content: center; }
+        /* MODAL - Architectural Precision */
+        #auth-modal { display: none; position: fixed; inset: 0; z-index: 10000; background: #000; flex-direction: column; padding: 40px 24px; align-items: center; justify-content: center; }
         #auth-modal.active { display: flex !important; }
         .modal-box { width: 100%; max-width: 480px; border: 1px solid rgba(255,255,255,0.1); padding: 50px; position: relative; }
+        .close-trigger { position: absolute; top: 20px; right: 25px; font-size: 40px; color: #444; cursor: pointer; line-height: 0.5; }
     </style>
 </head>
 <body>
 
     <div class="ticker-wrap">
         <div class="ticker">
-            CORE LIQUIDITY WINDOW: $5,000,000+ • DATA HARVESTING: FLORIDA / COLORADO • UNDERWRITING STATUS: ACTIVE • SECURE PRINCIPAL TERMINAL ONLINE
+            SYSTEM STATUS: OPERATIONAL • HARVESTING: PINELLAS (FL) / BOULDER (CO) • FORENSIC EQUITY MATCH: ACTIVE • CAPITAL WINDOW: $5M+ LIQUIDITY
         </div>
     </div>
 
-    <nav class="px-8 md:px-12 py-10 flex justify-between items-center max-w-7xl mx-auto border-b border-white/5">
-        <img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="SCC" class="h-8 md:h-12 opacity-90">
+    <nav class="p-10 flex justify-between items-center max-w-7xl mx-auto">
+        <img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="SCC" class="h-8 md:h-12 grayscale opacity-70">
         <div class="hidden md:flex space-x-12 text-[9px] uppercase tracking-[0.4em] font-bold text-slate-500">
-            <span class="hover:text-white cursor-pointer transition border-b border-transparent hover:border-white">Commercial</span>
-            <span class="hover:text-white cursor-pointer transition border-b border-transparent hover:border-white">Residential</span>
-            <span class="hover:text-white cursor-pointer transition border-b border-transparent hover:border-white">Principal Onboarding</span>
+            <span>Commercial</span>
+            <span>Residential</span>
+            <span>Principal Onboarding</span>
         </div>
     </nav>
 
-    <header class="py-24 px-8 text-center max-w-5xl mx-auto">
-        <h4 class="text-[9px] text-slate-500 font-bold uppercase tracking-[0.8em] mb-8">Institutional Intelligence Desk</h4>
-        <h1 class="serif text-6xl md:text-8xl mb-12 italic leading-tight text-white uppercase tracking-tighter">Equity <br><span class="text-slate-500 not-italic font-light">Verification.</span></h1>
-        <p class="text-slate-400 text-xs md:text-base font-light leading-loose mb-16 max-w-2xl mx-auto uppercase tracking-widest italic">
-            Deploying forensic-grade data extraction and capital engineering for sophisticated market partners.
+    <header class="py-24 px-10 text-center max-w-4xl mx-auto">
+        <h1 class="serif text-5xl md:text-8xl mb-8 italic text-white uppercase tracking-tighter leading-none">The <span class="text-slate-600 not-italic font-light">Vault.</span></h1>
+        <p class="text-slate-500 text-[10px] md:text-xs font-medium leading-loose mb-12 uppercase tracking-[0.5em]">
+            Proprietary Forensic Infrastructure <br> for High-Equity Capture
         </p>
-        <button onclick="toggleModal()" class="btn-onboard max-w-xs mx-auto">Access Principal Terminal ($497)</button>
+        <button onclick="toggleModal()" class="btn-principal">Authorize Access ($497)</button>
     </header>
 
-    <section class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t border-white/5">
-        <div class="segment-card border-r-0 lg:border-r">
-            <h4 class="text-[9px] text-slate-600 font-black tracking-[0.5em] mb-12 uppercase">01 / The Data</h4>
-            <h2 class="serif text-3xl italic mb-6">Extraction</h2>
-            <p class="text-slate-500 text-xs leading-loose font-light italic mb-8">Direct-source courthouse API harvesting. We eliminate retail latency through proprietary scraping protocols.</p>
-            <span class="text-[8px] text-emerald-500 font-bold tracking-widest uppercase italic">Protocols Loaded</span>
+    
+
+    <section class="max-w-7xl mx-auto system-grid">
+        <div class="grid-item">
+            <h4 class="text-[9px] text-slate-600 font-bold tracking-[0.4em] mb-8 uppercase">01 / Harvest</h4>
+            <h2 class="serif text-2xl italic mb-4">Direct Extraction</h2>
+            <p class="text-slate-500 text-[11px] leading-loose font-light">Direct courthouse API harvesting for Florida and Colorado. Zero retail latency.</p>
         </div>
-        <div class="segment-card border-r-0 lg:border-r">
-            <h4 class="text-[9px] text-slate-600 font-black tracking-[0.5em] mb-12 uppercase">02 / The Filter</h4>
-            <h2 class="serif text-3xl italic mb-6">Verification</h2>
-            <p class="text-slate-500 text-xs leading-loose font-light italic mb-8">A 14-point trigger logic designed to identify high-conviction distress before public market exposure.</p>
-            <span class="text-[8px] text-emerald-500 font-bold tracking-widest uppercase italic">Underwriting Active</span>
+        <div class="grid-item">
+            <h4 class="text-[9px] text-slate-600 font-bold tracking-[0.4em] mb-8 uppercase">02 / Filter</h4>
+            <h2 class="serif text-2xl italic mb-4">Distress Logic</h2>
+            <p class="text-slate-500 text-[11px] leading-loose font-light">A 14-point equity trigger designed to identify high-conviction distress before market exposure.</p>
         </div>
-        <div class="segment-card border-r-0 lg:border-r">
-            <h4 class="text-[9px] text-slate-600 font-black tracking-[0.5em] mb-12 uppercase">03 / The Script</h4>
-            <h2 class="serif text-3xl italic mb-6">Positioning</h2>
-            <p class="text-slate-500 text-xs leading-loose font-light italic mb-8">Institutional-grade dialogue frameworks designed for principal-to-principal distress resolution.</p>
-            <span class="text-[8px] text-emerald-500 font-bold tracking-widest uppercase italic">Library Verified</span>
+        <div class="grid-item">
+            <h4 class="text-[9px] text-slate-600 font-bold tracking-[0.4em] mb-8 uppercase">03 / Acquire</h4>
+            <h2 class="serif text-2xl italic mb-4">The Scripts</h2>
+            <p class="text-slate-500 text-[11px] leading-loose font-light">Institutional-grade dialogue frameworks designed for principal-to-principal distress resolution.</p>
         </div>
-        <div class="segment-card bg-white/[0.01]">
-            <h4 class="text-[9px] text-white font-black tracking-[0.5em] mb-12 uppercase">04 / The Capital</h4>
-            <h2 class="serif text-3xl italic mb-6 text-white uppercase">Liquidity</h2>
-            <p class="text-slate-300 text-xs leading-loose font-light italic mb-8">Direct priority window for SCC asset-based lending desk. We fund what the system identifies.</p>
-            <span class="text-[8px] text-emerald-400 font-bold tracking-widest uppercase italic font-bold">Priority Status</span>
+        <div class="grid-item bg-white/[0.02]">
+            <h4 class="text-[9px] text-white font-bold tracking-[0.4em] mb-8 uppercase">04 / Fund</h4>
+            <h2 class="serif text-2xl italic mb-4 text-white uppercase text-emerald-400">Liquidity</h2>
+            <p class="text-slate-300 text-[11px] leading-loose italic font-light">Direct priority access to the SCC lending desk. Asset-based capital deployment for Vault-sourced assets.</p>
         </div>
     </section>
 
@@ -96,31 +91,30 @@
 [Image of the real estate investment life cycle]
 
 
-    <section class="py-24 px-12 border-y border-white/5 text-center">
-        <h3 class="text-[9px] text-slate-600 uppercase tracking-[1em] mb-16 italic">Regional Deployment Status</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            <div><p class="text-[10px] uppercase text-slate-800 mb-2 font-bold">Pinellas (FL)</p><div class="h-[1px] w-4 bg-emerald-900 mx-auto mb-2"></div><p class="text-[8px] font-bold text-emerald-900 tracking-widest uppercase italic">Locked</p></div>
-            <div><p class="text-[10px] uppercase text-slate-800 mb-2 font-bold">Boulder (CO)</p><div class="h-[1px] w-4 bg-emerald-900 mx-auto mb-2"></div><p class="text-[8px] font-bold text-emerald-900 tracking-widest uppercase italic">Locked</p></div>
-            <div><p class="text-[10px] uppercase text-white mb-2 font-bold">Denver (CO)</p><div class="h-[1px] w-4 bg-white/20 mx-auto mb-2"></div><p class="text-[8px] font-bold text-white tracking-widest uppercase italic">Active</p></div>
-            <div><p class="text-[10px] uppercase text-white mb-2 font-bold">Tampa (FL)</p><div class="h-[1px] w-4 bg-white/20 mx-auto mb-2"></div><p class="text-[8px] font-bold text-white tracking-widest uppercase italic">Active</p></div>
+    <section class="py-24 border-y border-white/5 text-center">
+        <h3 class="text-[9px] text-slate-700 uppercase tracking-[0.8em] mb-12">Territory Deployment Report</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto px-6">
+            <div><p class="text-[10px] uppercase text-slate-800 mb-2 font-bold">Pinellas (FL)</p><p class="text-[8px] font-bold text-emerald-900 tracking-widest uppercase italic">Locked</p></div>
+            <div><p class="text-[10px] uppercase text-slate-800 mb-2 font-bold">Boulder (CO)</p><p class="text-[8px] font-bold text-emerald-900 tracking-widest uppercase italic">Locked</p></div>
+            <div><p class="text-[10px] uppercase text-white mb-2 font-bold">Denver (CO)</p><p class="text-[8px] font-bold text-white tracking-widest uppercase italic">Active</p></div>
+            <div><p class="text-[10px] uppercase text-white mb-2 font-bold">Tampa (FL)</p><p class="text-[8px] font-bold text-white tracking-widest uppercase italic">Active</p></div>
         </div>
     </section>
 
-    <footer class="py-32 text-center border-t border-white/5">
-        <p class="text-[8px] tracking-[1.2em] uppercase text-slate-700">© 2026 Summit Coast Capital. Underwriting & Liquidity. </p>
-        <p class="text-[7px] tracking-[0.5em] uppercase text-slate-800 mt-4 italic">All deal funding subject to property underwriting and forensic criteria.</p>
+    <footer class="py-32 text-center opacity-20">
+        <p class="text-[8px] tracking-[1.5em] uppercase">Summit Coast Capital Institutional</p>
     </footer>
 
     <div id="auth-modal" onclick="toggleModal()">
         <div class="modal-box" onclick="event.stopPropagation()">
-            <span class="absolute top-8 right-10 text-slate-700 text-4xl cursor-pointer hover:text-white" onclick="toggleModal()">&times;</span>
+            <span class="close-trigger" onclick="toggleModal()">&times;</span>
             <h2 class="serif text-4xl italic text-center mb-4">Onboarding <br><span class="text-slate-500 not-italic uppercase text-xl tracking-widest">Protocol.</span></h2>
             <div class="space-y-6 mb-16 text-left border-y border-white/5 py-12 px-4">
                 <div class="flex items-center gap-4 text-[10px] tracking-[0.3em] text-slate-500 uppercase"><span>01</span> Digital Protocol Access</div>
                 <div class="flex items-center gap-4 text-[10px] tracking-[0.3em] text-slate-500 uppercase"><span>02</span> Forensic Library Verification</div>
                 <div class="flex items-center gap-4 text-[10px] tracking-[0.3em] text-white font-bold italic uppercase"><span>03</span> SCC Funding Desk Integration</div>
             </div>
-            <a href="https://buy.stripe.com/test_5kQeVfc9Z3si23hcYyb7y00" class="btn-onboard">Finalize Authorization ($497)</a>
+            <a href="https://buy.stripe.com/test_5kQeVfc9Z3si23hcYyb7y00" class="btn-principal">Finalize Authorization ($497)</a>
             <p class="text-[7px] text-slate-700 mt-10 uppercase tracking-widest italic text-center">Secure Gateway Powered by Stripe. 256-bit Encryption.</p>
         </div>
     </div>
