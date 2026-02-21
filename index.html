@@ -20,25 +20,29 @@
             background-size: cover; background-position: center; text-align: center;
         }
 
-        /* MODAL FIX */
-        #checkout-modal { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(2, 6, 23, 0.98); backdrop-filter: blur(25px); align-items: center; justify-content: center; padding: 20px; }
-        #checkout-modal.active { display: flex !important; }
+        /* THE "OVERLAY" FIX */
+        #vault-payment-screen { 
+            display: none; position: fixed; inset: 0; z-index: 10000; 
+            background: rgba(2, 6, 23, 0.98); backdrop-filter: blur(30px); 
+            align-items: center; justify-content: center; padding: 20px; 
+        }
+        #vault-payment-screen.show { display: flex !important; }
         
-        .modal-box { 
+        .payment-box { 
             background: #020617; border: 1px solid rgba(255,255,255,0.1); 
-            border-radius: 40px; width: 100%; max-width: 500px; position: relative; padding: 3rem;
-            box-shadow: 0 0 50px rgba(0,0,0,0.8);
+            border-radius: 40px; width: 100%; max-width: 500px; position: relative; padding: 4rem 3rem;
+            box-shadow: 0 0 100px rgba(0,0,0,0.9);
         }
         
-        /* THE "X" - NOW LARGER AND GLOWING */
-        .close-x { 
-            position: absolute; top: 20px; right: 25px; font-size: 50px; 
-            color: #4A607D; cursor: pointer; line-height: 1; z-index: 10001;
-            text-shadow: 0 0 10px rgba(74, 96, 125, 0.5);
+        /* THE "X" - REDESIGNED FOR MAX CLICKABILITY */
+        .exit-vault { 
+            position: absolute; top: 20px; right: 30px; font-size: 50px; 
+            color: #4A607D; cursor: pointer; line-height: 1; z-index: 10001; 
+            font-weight: 300; transition: color 0.2s;
         }
-        .close-x:hover { color: #ffffff; }
+        .exit-vault:hover { color: #ffffff; }
 
-        .btn-navy { background-color: #1B365D; color: white; transition: 0.3s; border-radius: 50px; padding: 1.25rem 2.5rem; font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase; font-size: 11px; }
+        .btn-navy { background-color: #1B365D; color: white; transition: 0.3s; border-radius: 50px; padding: 1.25rem 2.5rem; font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase; font-size: 11px; text-align: center; display: block; }
         .btn-navy:hover { background-color: #0A1F44; transform: scale(1.02); }
     </style>
 </head>
@@ -62,36 +66,45 @@
             <p class="text-xl md:text-2xl text-slate-300 font-light mb-12 italic max-w-3xl mx-auto">
                 Deploy the proprietary framework used to pinpoint hidden equity 45 days before the public market awakens.
             </p>
-            <button onclick="openModal()" class="bg-white text-slate-900 px-12 py-5 rounded-full font-bold uppercase tracking-widest text-[10px] hover:bg-slate-200 transition shadow-2xl">Secure Access</button>
+            <button onclick="launchVault()" class="bg-white text-slate-900 px-12 py-5 rounded-full font-bold uppercase tracking-widest text-[10px] hover:bg-slate-200 transition shadow-2xl">Secure Access</button>
         </div>
     </section>
 
-    <div id="checkout-modal" onclick="closeModal()">
-        <div class="modal-box" onclick="event.stopPropagation()">
-            <span class="close-x" onclick="closeModal()">&times;</span>
-            <h2 class="serif text-4xl mb-4 text-white italic text-center">Final <span class="text-slate-500 not-italic">Step</span></h2>
-            <p class="text-slate-500 text-[10px] uppercase tracking-[0.4em] mb-8 text-center">Authorize Principal Access</p>
+    <div id="vault-payment-screen" onclick="closeVault()">
+        <div class="payment-box" onclick="event.stopPropagation()">
+            <div class="exit-vault" onclick="closeVault()">&times;</div>
             
-            <div class="space-y-4 mb-10 border-y border-white/5 py-8">
-                <div class="flex items-center gap-4"><span class="text-emerald-500">✔</span><p class="text-xs text-slate-300 italic">Phase 01-04 Principal Protocols</p></div>
-                <div class="flex items-center gap-4"><span class="text-emerald-500">✔</span><p class="text-xs text-slate-300 italic">Institutional Script Library</p></div>
-                <div class="flex items-center gap-4"><span class="text-emerald-400">✔</span><p class="text-xs text-slate-300 italic">Priority SCC Capital Window</p></div>
+            <h2 class="serif text-4xl mb-2 text-white italic text-center">Final <span class="text-slate-500 not-italic">Step</span></h2>
+            <p class="text-slate-500 text-[10px] uppercase tracking-[0.4em] mb-10 text-center">Authorize Principal Access</p>
+            
+            <div class="space-y-5 mb-12 border-y border-white/5 py-10">
+                <div class="flex items-center gap-4"><span class="text-emerald-500">✔</span><p class="text-[13px] text-slate-300 italic">Phase 01-04 Principal Protocols</p></div>
+                <div class="flex items-center gap-4"><span class="text-emerald-500">✔</span><p class="text-[13px] text-slate-300 italic">Institutional Script Library</p></div>
+                <div class="flex items-center gap-4"><span class="text-emerald-400">✔</span><p class="text-[13px] text-slate-300 italic">Priority SCC Capital Window</p></div>
             </div>
 
-            <a href="https://buy.stripe.com/test_5kQeVfc9Z3si23hcYyb7y00" class="btn-navy w-full block text-center mb-4">Proceed to Stripe ($497)</a>
-            <p class="text-[9px] text-slate-600 uppercase tracking-widest text-center">Bank-Grade Secure Checkout</p>
+            <a href="https://buy.stripe.com/test_5kQeVfc9Z3si23hcYyb7y00" class="btn-navy">Proceed to Stripe ($497)</a>
+            <p class="mt-6 text-[9px] text-slate-600 uppercase tracking-widest text-center">Bank-Grade Secure Checkout</p>
         </div>
     </div>
 
     <script>
-        function openModal() {
-            document.getElementById('checkout-modal').classList.add('active');
+        function launchVault() {
+            const screen = document.getElementById('vault-payment-screen');
+            screen.classList.add('show');
             document.body.style.overflow = 'hidden';
         }
-        function closeModal() {
-            document.getElementById('checkout-modal').classList.remove('active');
+        function closeVault() {
+            const screen = document.getElementById('vault-payment-screen');
+            screen.classList.remove('show');
             document.body.style.overflow = 'auto';
         }
+        // ESCAPE KEY SUPPORT
+        window.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeVault();
+            }
+        });
     </script>
 
     <footer class="p-20 text-center text-[10px] text-slate-600 uppercase tracking-[0.4em]">© 2026 Summit Coast Intelligence. Proprietary Protocols.</footer>
