@@ -8,117 +8,113 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
         html { scroll-behavior: smooth; }
-        body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; }
+        
+        /* MATCHING NAVY BRANDING */
+        body { background-color: #020617; color: #ffffff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .serif { font-family: 'Playfair Display', serif; }
-        .glass-nav { background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
-        .module-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(16, 185, 129, 0.1); transition: all 0.4s ease; overflow: hidden; }
-        .module-card:hover { border-color: #10b981; background: rgba(16, 185, 129, 0.05); transform: translateY(-10px); }
-        .emerald-glow { text-shadow: 0 0 30px rgba(16, 185, 129, 0.4); }
-        .hero-gradient { background: radial-gradient(circle at center, #062d1f 0%, #050505 100%); }
+        .glass-nav { background: rgba(2, 6, 23, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        
+        /* MODULE CARDS IN NAVY/SLATE */
+        .module-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.4s ease; overflow: hidden; }
+        .module-card:hover { border-color: #4A607D; background: rgba(74, 96, 125, 0.05); transform: translateY(-10px); }
+        
+        /* RESTORED LUXURY MANSION BACKGROUND */
+        .hero-bg { 
+            background: radial-gradient(circle at center, rgba(27, 54, 93, 0.2) 0%, rgba(2, 6, 23, 1) 100%), 
+            url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80'); 
+            background-size: cover; background-position: center;
+        }
+        
+        .text-slate { color: #4A607D; }
+        .btn-navy { background-color: #1B365D; color: white; transition: all 0.3s; border-radius: 50px; }
+        .btn-navy:hover { background-color: #0A1F44; transform: scale(1.05); }
     </style>
 </head>
 <body>
 
     <nav class="fixed top-0 w-full z-50 glass-nav">
         <div class="max-w-7xl mx-auto px-8 h-24 flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-tighter uppercase text-white">The <span class="text-emerald-500 italic font-light">Vault</span></div>
-            <a href="https://summitcoastcapital.com" class="text-[10px] uppercase tracking-[0.4em] text-gray-500 hover:text-emerald-400 transition">← Return to Summit Coast</a>
+            <div class="flex items-center gap-4">
+                <img src="LOGO_URL_HERE" alt="Logo" class="h-10 w-auto opacity-90">
+                <div class="text-2xl font-bold tracking-tighter uppercase text-white">The <span class="text-slate-400 italic font-light">Vault</span></div>
+            </div>
+            <a href="https://summitcoastcapital.com" class="text-[10px] uppercase tracking-[0.4em] text-gray-500 hover:text-slate-400 transition">← Return to Summit Coast</a>
         </div>
     </nav>
 
-    <section class="hero-gradient min-h-screen flex items-center justify-center pt-24 px-6 text-center">
+    <section class="hero-bg min-h-screen flex items-center justify-center pt-24 px-6 text-center">
         <div class="max-w-5xl">
-            <span class="text-emerald-500 text-xs font-bold tracking-[0.6em] uppercase mb-6 block">Confidential Intelligence System</span>
-            <h1 class="serif text-6xl md:text-9xl mb-8 leading-none emerald-glow italic">The Intelligence <br><span class="text-white not-italic font-light">Behind the Deals.</span></h1>
-            <p class="text-xl md:text-2xl text-gray-400 font-light mb-12 max-w-3xl mx-auto">
+            <span class="text-slate-400 text-xs font-bold tracking-[0.6em] uppercase mb-6 block">Confidential Intelligence System</span>
+            <h1 class="serif text-6xl md:text-9xl mb-8 leading-none italic text-white">The Intelligence <br><span class="text-slate-400 not-italic font-light">Behind the Deals.</span></h1>
+            <p class="text-xl md:text-2xl text-slate-300 font-light mb-12 max-w-3xl mx-auto">
                 Stop guessing. Start engineering. Access the exact blueprint Samuel Salankey uses to scout, fund, and close off-market equity.
             </p>
-            <a href="#syllabus" class="bg-emerald-600 text-white px-12 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-emerald-500 transition shadow-2xl shadow-emerald-500/20">View the Intelligence Syllabus</a>
+            <a href="#syllabus" class="btn-navy px-12 py-5 font-bold uppercase tracking-widest text-[11px] inline-block">View Phase Intelligence</a>
         </div>
     </section>
 
-    <section id="syllabus" class="py-32 px-8 bg-[#050505]">
+    <section id="syllabus" class="py-32 px-8">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-20">
-                <h2 class="serif text-5xl md:text-7xl mb-6">What's Inside <span class="text-emerald-500 italic">The Vault</span></h2>
-                <p class="text-gray-500 uppercase tracking-widest text-xs">A 4-Phase Tactical Execution System</p>
+                <h2 class="serif text-5xl md:text-7xl mb-6">Inside <span class="text-slate-400 italic">The Vault</span></h2>
+                <p class="text-slate-500 uppercase tracking-widest text-xs">A 4-Phase Tactical Execution System</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
                 
                 <div class="module-card p-10 rounded-[40px]">
                     <div class="flex justify-between items-start mb-8">
-                        <span class="text-emerald-500 font-bold text-sm tracking-widest uppercase">Phase 01</span>
-                        <span class="text-4xl text-emerald-900/40 font-bold serif italic">The Scout</span>
+                        <span class="text-slate-400 font-bold text-sm tracking-widest uppercase">Phase 01</span>
+                        <span class="text-4xl text-slate-900/40 font-bold serif italic">The Scout</span>
                     </div>
                     <h3 class="serif text-3xl mb-4 text-white">Forensic Lead Scouting</h3>
-                    <p class="text-gray-400 font-light mb-6">Learn how to extract daily pre-foreclosure and Lis Pendens data directly from courthouse records in FL & CO. We show you how to find them 30 days before the "big box" websites.</p>
-                    <ul class="text-sm text-gray-500 space-y-2 italic">
-                        <li>• Courthouse Scraping Protocols</li>
-                        <li>• Probate & Divorce Lead Detection</li>
-                        <li>• The "Hidden REO" List Strategy</li>
-                    </ul>
+                    <p class="text-slate-400 font-light mb-6 italic">Scrape courthouse records in FL & CO to find deals 30 days before the public market.</p>
                 </div>
 
                 <div class="module-card p-10 rounded-[40px]">
                     <div class="flex justify-between items-start mb-8">
-                        <span class="text-emerald-500 font-bold text-sm tracking-widest uppercase">Phase 02</span>
-                        <span class="text-4xl text-emerald-900/40 font-bold serif italic">The AI</span>
+                        <span class="text-slate-400 font-bold text-sm tracking-widest uppercase">Phase 02</span>
+                        <span class="text-4xl text-slate-900/40 font-bold serif italic">The AI</span>
                     </div>
                     <h3 class="serif text-3xl mb-4 text-white">Equity-Scout AI Filtering</h3>
-                    <p class="text-gray-400 font-light mb-6">Stop calling the wrong people. Use our proprietary AI framework to filter leads by "Equity-to-Debt" ratios and 14 hidden distress triggers that signal a guaranteed deal.</p>
-                    <ul class="text-sm text-gray-500 space-y-2 italic">
-                        <li>• Algorithmic Lead Scoring</li>
-                        <li>• Forensic Equity Calculation</li>
-                        <li>• AI-Driven Market Heat Maps</li>
-                    </ul>
+                    <p class="text-slate-400 font-light mb-6 italic">Proprietary algorithms that scan for trapped equity and hidden distress triggers.</p>
                 </div>
 
                 <div class="module-card p-10 rounded-[40px]">
                     <div class="flex justify-between items-start mb-8">
-                        <span class="text-emerald-500 font-bold text-sm tracking-widest uppercase">Phase 03</span>
-                        <span class="text-4xl text-emerald-900/40 font-bold serif italic">The Strike</span>
+                        <span class="text-slate-400 font-bold text-sm tracking-widest uppercase">Phase 03</span>
+                        <span class="text-4xl text-slate-900/40 font-bold serif italic">The Strike</span>
                     </div>
                     <h3 class="serif text-3xl mb-4 text-white">Direct-to-Seller Dominance</h3>
-                    <p class="text-gray-400 font-light mb-6">Access the exact scripts and skip-tracing methods used to get motivated sellers on the phone. We don't "cold call"; we provide solutions that sellers actually want.</p>
-                    <ul class="text-sm text-gray-500 space-y-2 italic">
-                        <li>• Professional "White Knight" Scripts</li>
-                        <li>• High-Response Direct Mail Templates</li>
-                        <li>• Skip Tracing for "Hard-to-Find" Owners</li>
-                    </ul>
+                    <p class="text-slate-400 font-light mb-6 italic">Professional skip-tracing and "White Knight" scripts for motivated sellers.</p>
                 </div>
 
                 <div class="module-card p-10 rounded-[40px]">
                     <div class="flex justify-between items-start mb-8">
-                        <span class="text-emerald-500 font-bold text-sm tracking-widest uppercase">Phase 04</span>
-                        <span class="text-4xl text-emerald-900/40 font-bold serif italic">The Capital</span>
+                        <span class="text-slate-400 font-bold text-sm tracking-widest uppercase">Phase 04</span>
+                        <span class="text-4xl text-slate-900/40 font-bold serif italic">The Capital</span>
                     </div>
                     <h3 class="serif text-3xl mb-4 text-white">Funding & Exit Engineering</h3>
-                    <p class="text-gray-400 font-light mb-6">The "Unfair Advantage." Once you find the deal, you get direct priority access to Summit Coast Capital’s private funding to close in as little as 7 days.</p>
-                    <ul class="text-sm text-gray-500 space-y-2 italic">
-                        <li>• Direct Bridge/Flip Funding Access</li>
-                        <li>• Creative Financing Blueprints</li>
-                        <li>• Portfolio Scaling Strategies</li>
-                    </ul>
+                    <p class="text-slate-400 font-light mb-6 italic">Priority access to Summit Coast Capital’s private funding channels.</p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <section class="py-32 px-8 bg-emerald-950/10 border-y border-white/5 text-center">
-        <h2 class="serif text-5xl md:text-6xl mb-8">Get the <span class="text-emerald-500 italic">Combination.</span></h2>
-        <p class="text-gray-400 text-xl mb-12 max-w-2xl mx-auto font-light italic">
-            "Information is the only currency that matters in a distressed market. The Vault gives you the bank."
+    <section class="py-32 px-8 bg-[#1B365D]/10 border-y border-white/5 text-center">
+        <h2 class="serif text-5xl md:text-6xl mb-8 text-white">Get the <span class="text-slate-400 italic">Combination.</span></h2>
+        <p class="text-slate-400 text-xl mb-12 max-w-2xl mx-auto font-light italic">
+            "Information is the only currency that matters in a distressed market."
         </p>
-        <a href="mailto:Samuel@summitcoastcapital.com?subject=Vault%20Onboarding%20Request&body=Samuel%2C%0A%0AI%20am%20ready%20for%20Phase%2001.%20Please%20send%20the%20onboarding%20packet.%0A%0A1.%20Full%20Name%3A%0A2.%20Phone%3A%0A3.%20Market%20Focus%3A%0A4.%20Experience%20Level%3A" 
-           class="bg-white text-black px-12 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-emerald-400 transition inline-block transform hover:scale-105">
-            Request Access to the Intel
+        <a href="mailto:Samuel@summitcoastcapital.com?subject=Vault%20Onboarding%20Request" 
+           class="bg-white text-[#020617] px-12 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-slate-200 transition inline-block transform hover:scale-105">
+            Request The Combination
         </a>
     </section>
 
-    <footer class="p-20 text-center text-[10px] text-gray-600 uppercase tracking-[0.4em]">
-        © 2026 A Summit Coast Capital Intelligence Product. Built by Samuel Salankey.
+    <footer class="p-20 text-center text-[10px] text-slate-600 uppercase tracking-[0.4em]">
+        © 2026 Summit Coast Capital Intelligence. Principal: Samuel Salankey.
     </footer>
 
 </body>
