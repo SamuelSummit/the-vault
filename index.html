@@ -8,79 +8,86 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:ital,wght@1,900&display=swap');
         
-        body { background-color: #010409; color: #ffffff; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; margin: 0; }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        body { background-color: #010409; color: #ffffff; font-family: 'Inter', sans-serif; margin: 0; padding: 0; overflow-x: hidden; }
         .serif { font-family: 'Playfair Display', serif; }
-        
+
         /* THE TICKER - Now Sharper */
-        .ticker-wrap { background: #0A1F44; border-bottom: 2px solid #1B365D; overflow: hidden; white-space: nowrap; padding: 10px 0; position: sticky; top: 0; z-index: 100; }
-        .ticker { display: inline-block; animation: ticker 35s linear infinite; font-size: 10px; font-weight: 900; letter-spacing: 2px; color: #34d399; }
+        .ticker-wrap { background: #0A1F44; border-bottom: 2px solid #1B365D; overflow: hidden; white-space: nowrap; padding: 12px 0; position: sticky; top: 0; z-index: 100; }
+        .ticker { display: inline-block; animation: ticker 30s linear infinite; font-size: 10px; font-weight: 900; letter-spacing: 2px; color: #34d399; }
         @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+
+        /* HERO - AGGRESSIVE SCALE */
+        .hero { padding: 80px 24px 40px; text-align: center; background: radial-gradient(circle at top, #1B365D55, transparent 70%); }
+        .hero h1 { font-size: 4rem; line-height: 0.85; letter-spacing: -3px; text-transform: uppercase; margin-bottom: 1rem; }
 
         /* PHASE CARDS - THE "TECH" LOOK */
         .phase-card { 
             background: #0d1117; 
             border: 1px solid #30363d; 
-            border-radius: 4px; 
-            position: relative; 
-            padding: 30px 20px;
+            border-left: 4px solid #1B365D;
+            padding: 30px 24px;
+            margin: 0 20px 12px 20px;
         }
-        .phase-card:after {
-            content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #1B365D;
-        }
-        .phase-card.featured:after { background: #34d399; }
+        .phase-card.featured { border-left-color: #34d399; }
 
         /* BUTTONS - Hard Edges, High Stakes */
         .btn-action { 
-            background: #ffffff; color: #010409; width: 100%; padding: 22px; 
-            font-weight: 900; text-transform: uppercase; letter-spacing: 3px; font-size: 12px; 
-            border-radius: 2px; transition: 0.2s; border: 1px solid #ffffff;
+            background: #ffffff; color: #010409; width: calc(100% - 40px); margin: 0 20px; padding: 24px; 
+            font-weight: 900; text-transform: uppercase; letter-spacing: 3px; font-size: 13px; 
+            border-radius: 0; border: none; 
         }
-        .btn-action:active { background: #0A1F44; color: #ffffff; }
 
-        /* THE MODAL - Full Screen Mobile */
-        #payment-modal { display: none; position: fixed; inset: 0; z-index: 10000; background: #010409; flex-direction: column; padding: 40px 25px; }
+        /* FIXED FOOTER */
+        .mobile-footer { position: fixed; bottom: 0; left: 0; right: 0; padding: 20px; background: #010409; border-top: 1px solid #ffffff11; z-index: 50; }
+
+        /* MODAL - FULL SCREEN APP STYLE */
+        #payment-modal { 
+            display: none; position: fixed; inset: 0; z-index: 10000; 
+            background: #010409; flex-direction: column; padding: 0;
+        }
         #payment-modal.active { display: flex !important; }
-        .close-x { position: absolute; top: 30px; right: 25px; font-size: 40px; color: #4A607D; line-height: 1; }
+        .modal-header { padding: 30px; display: flex; justify-content: flex-end; }
+        .close-x { font-size: 50px; color: #4A607D; line-height: 0.5; cursor: pointer; }
+        .modal-body { padding: 0 40px; }
     </style>
 </head>
-<body class="pb-24">
+<body class="pb-32">
 
     <div class="ticker-wrap">
         <div class="ticker">
-            CORE SYSTEM ONLINE • HARVESTING PINELLAS COUNTY (FL) • EQUITY TRIGGER ACTIVE • $5M+ CAPITAL LIQUIDITY
+            SYSTEM ONLINE • HARVESTING PINELLAS COUNTY (FL) • EQUITY TRIGGER ACTIVE • $5M+ LIQUIDITY WINDOW
         </div>
     </div>
 
-    <nav class="p-6 flex justify-between items-center border-b border-white/5">
-        <img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="SCC" class="h-8">
-        <div class="text-[9px] font-black tracking-widest text-slate-600 uppercase">Vault v4.0</div>
+    <nav class="p-6 flex justify-between items-center">
+        <img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="SCC" class="h-10">
+        <div class="text-[9px] font-black tracking-widest text-slate-700 uppercase italic">Principal Terminal</div>
     </nav>
 
-    <header class="py-16 px-6 text-center">
-        <h1 class="serif text-5xl italic leading-tight mb-6">The <br><span class="text-slate-500 not-italic font-black tracking-tighter uppercase italic">Equity Matrix.</span></h1>
-        <p class="text-slate-400 text-xs italic leading-loose mb-10 max-w-xs mx-auto uppercase tracking-widest">
-            Pinpoint distress. <br> Engineer capital. <br> Control the market.
-        </p>
-        <button onclick="toggleModal()" class="btn-action">Secure Access ($497)</button>
+    <header class="hero">
+        <h1 class="serif italic">The <br><span class="text-slate-600 not-italic">Vault.</span></h1>
+        <p class="text-slate-400 text-[10px] uppercase tracking-[0.5em] mb-12">Forensic Equity Infrastructure</p>
+        <button onclick="toggleModal()" class="btn-action">Authorize Access ($497)</button>
     </header>
 
-    <main class="px-6 space-y-4">
+    <main class="space-y-4">
         <div class="phase-card">
-            <h3 class="text-emerald-500 text-[9px] font-black tracking-[0.4em] mb-4 uppercase">Protocol 01 / Harvest</h3>
-            <h2 class="serif text-2xl italic mb-3">The Scraper</h2>
-            <p class="text-slate-500 text-[11px] leading-relaxed">Direct courthouse API harvesting for Florida and Colorado. Zero retail noise.</p>
+            <h3 class="text-emerald-500 text-[9px] font-black tracking-[0.4em] mb-4 uppercase">Protocol 01</h3>
+            <h2 class="serif text-3xl italic mb-3">The Scraper</h2>
+            <p class="text-slate-500 text-xs leading-relaxed">Direct courthouse API harvesting for Florida and Colorado. Zero retail noise.</p>
         </div>
 
         <div class="phase-card">
-            <h3 class="text-emerald-500 text-[9px] font-black tracking-[0.4em] mb-4 uppercase">Protocol 02 / Refine</h3>
-            <h2 class="serif text-2xl italic mb-3">Distress Logic</h2>
-            <p class="text-slate-500 text-[11px] leading-relaxed">14-point equity filter algorithm to rank seller motivation and spread.</p>
+            <h3 class="text-emerald-500 text-[9px] font-black tracking-[0.4em] mb-4 uppercase">Protocol 02</h3>
+            <h2 class="serif text-3xl italic mb-3">Distress Logic</h2>
+            <p class="text-slate-500 text-xs leading-relaxed">14-point equity filter algorithm to rank seller motivation and spread.</p>
         </div>
 
         <div class="phase-card featured">
-            <h3 class="text-emerald-400 text-[9px] font-black tracking-[0.4em] mb-4 uppercase italic">Priority Window</h3>
-            <h2 class="serif text-2xl italic mb-3 text-emerald-400">SCC Liquidity</h2>
-            <p class="text-slate-200 text-[11px] leading-relaxed italic font-bold">Direct line to the SCC lending desk for 7-day asset-based funding.</p>
+            <h3 class="text-emerald-400 text-[9px] font-black tracking-[0.4em] mb-4 uppercase italic">Priority Access</h3>
+            <h2 class="serif text-3xl italic mb-3 text-emerald-400">SCC Liquidity</h2>
+            <p class="text-slate-200 text-xs leading-relaxed italic font-bold">Direct line to the SCC lending desk for 7-day asset-based funding.</p>
         </div>
     </main>
 
@@ -89,23 +96,27 @@
 [Image of the real estate investment life cycle]
 
 
-    <div class="fixed bottom-0 left-0 right-0 p-4 bg-[#010409] border-t border-white/10">
-        <button onclick="toggleModal()" class="btn-action shadow-2xl">Authorize Access</button>
+    <div class="mobile-footer">
+        <button onclick="toggleModal()" class="btn-action shadow-2xl">Secure Your Territory</button>
     </div>
 
     <div id="payment-modal">
-        <span class="close-x" onclick="toggleModal()">&times;</span>
-        <h2 class="serif text-4xl italic mb-4 mt-20">Confirm <br>Authorization.</h2>
-        <p class="text-slate-500 text-[10px] uppercase tracking-widest mb-12 border-b border-white/5 pb-4">Principal Partnership Activation</p>
-        
-        <div class="space-y-6 mb-16">
-            <div class="flex items-center gap-4"><span class="text-emerald-500 font-black">✔</span><span class="text-[10px] uppercase tracking-widest text-slate-400">Phase 01-04 Protocols</span></div>
-            <div class="flex items-center gap-4"><span class="text-emerald-500 font-black">✔</span><span class="text-[10px] uppercase tracking-widest text-slate-400">Institutional Scripts</span></div>
-            <div class="flex items-center gap-4"><span class="text-emerald-500 font-black text-xl">✔</span><span class="text-[10px] uppercase tracking-widest text-emerald-400 font-black">SCC Priority Funding</span></div>
+        <div class="modal-header">
+            <span class="close-x" onclick="toggleModal()">&times;</span>
         </div>
+        <div class="modal-body text-center">
+            <h2 class="serif text-5xl italic mb-4">Confirm <br>Authorization.</h2>
+            <p class="text-slate-500 text-[10px] uppercase tracking-widest mb-12 border-b border-white/10 pb-6">Institutional Activation Fee</p>
+            
+            <div class="space-y-6 mb-16 text-left">
+                <div class="flex items-center gap-4"><span class="text-emerald-500 font-black">✔</span><span class="text-[11px] uppercase tracking-widest text-slate-400">Phase 01-04 Protocols</span></div>
+                <div class="flex items-center gap-4"><span class="text-emerald-500 font-black">✔</span><span class="text-[11px] uppercase tracking-widest text-slate-400">Institutional Scripts</span></div>
+                <div class="flex items-center gap-4"><span class="text-emerald-500 font-black text-2xl">✔</span><span class="text-[11px] uppercase tracking-widest text-emerald-400 font-black">SCC Priority Funding</span></div>
+            </div>
 
-        <a href="https://buy.stripe.com/test_5kQeVfc9Z3si23hcYyb7y00" class="btn-action text-center block">Proceed to Stripe ($497)</a>
-        <p class="text-[8px] text-slate-700 mt-8 uppercase text-center tracking-widest italic">Lending subject to asset-based underwriting.</p>
+            <a href="https://buy.stripe.com/test_5kQeVfc9Z3si23hcYyb7y00" class="btn-action text-center block" style="margin:0; width:100%;">Proceed to Stripe ($497)</a>
+            <p class="text-[8px] text-slate-700 mt-10 uppercase tracking-widest italic">Lending subject to asset-based underwriting.</p>
+        </div>
     </div>
 
     <script>
