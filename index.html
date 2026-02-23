@@ -3,84 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Phase 1: Harvest | The Vault Protocol</title>
+    <title>The Vault Protocol | Forensic Equity Intelligence</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
-        body { background-color: #ffffff; color: #1e293b; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        html { scroll-behavior: smooth; }
+        body { background-color: #ffffff; color: #1e293b; font-family: 'Inter', sans-serif; margin: 0; -webkit-font-smoothing: antialiased; }
         .serif { font-family: 'Playfair Display', serif; }
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #0a1f44; border-radius: 4px; }
-        .sidebar-link { transition: 0.3s; border-left: 2px solid transparent; }
-        .sidebar-link:hover, .sidebar-link.active { border-left-color: #1B365D; background: #f8fafc; color: #1B365D; }
+        
+        /* THE TERMINAL HERO */
+        .vault-hero { 
+            position: relative;
+            background: linear-gradient(rgba(10, 31, 68, 0.92), rgba(10, 31, 68, 0.98)), 
+                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover; background-position: center;
+            color: white; padding: 120px 24px; text-align: center; border-bottom: 8px solid #1B365D;
+        }
+
+        .phase-card { 
+            background: #ffffff; border: 1px solid #e2e8f0; padding: 50px 40px; transition: 0.4s ease;
+            height: 100%; display: flex; flex-direction: column; position: relative; overflow: hidden;
+        }
+        .phase-card:hover { border-color: #1B365D; transform: translateY(-8px); box-shadow: 0 30px 60px rgba(10, 31, 68, 0.1); }
+        
+        .phase-number {
+            position: absolute; right: -20px; bottom: -20px; font-size: 10rem; 
+            font-weight: 900; color: #f8fafc; z-index: 0; user-select: none;
+        }
+        .phase-content { position: relative; z-index: 10; }
+
+        .btn-vault-primary { 
+            background: #1B365D; color: white; padding: 18px 35px; 
+            font-weight: 800; text-transform: uppercase; letter-spacing: 3px; font-size: 11px;
+            border: none; cursor: pointer; transition: 0.3s; display: inline-block;
+        }
+        .btn-vault-primary:hover { background: #00a8e8; transform: scale(1.05); }
+
+        .marketing-stat { border-left: 4px solid #3b82f6; padding-left: 24px; }
     </style>
 </head>
 <body>
 
-    <nav class="p-6 bg-white border-b border-slate-100 flex justify-between items-center sticky top-0 z-50">
-        <div class="flex items-center gap-4">
-            <a href="index.html" class="text-slate-400 hover:text-[#1B365D] transition">← Vault Home</a>
-            <span class="text-slate-200">|</span>
-            <span class="text-[10px] font-bold uppercase tracking-widest text-[#1B365D]">Phase 1: Harvest</span>
+    <nav class="p-8 bg-white border-b border-slate-50 flex justify-between items-center sticky top-0 z-50">
+        <a href="../index.html"><img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="Summit Coast Capital" class="h-8 md:h-12"></a>
+        <div class="hidden md:flex gap-10 text-[9px] font-bold uppercase tracking-[0.4em] text-slate-400 italic">
+            Secure Terminal Access // Samuel Steele Salankey
         </div>
-        <img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="SCC" class="h-6 opacity-50">
     </nav>
 
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-0">
-        
-        <aside class="lg:col-span-3 border-r border-slate-100 h-auto lg:h-[calc(100vh-80px)] p-8">
-            <h5 class="text-[9px] font-black uppercase tracking-[0.3em] text-slate-400 mb-8 italic">Module Curriculum</h5>
-            <nav class="space-y-2">
-                <a href="#" class="sidebar-link active block p-4 text-xs font-bold uppercase tracking-widest">1.1 The Investor Mindset</a>
-                <a href="#" class="sidebar-link block p-4 text-xs font-bold uppercase tracking-widest text-slate-400">1.2 Commission vs. Equity</a>
-                <a href="#" class="sidebar-link block p-4 text-xs font-bold uppercase tracking-widest text-slate-400">1.3 Mapping The Freedom Number</a>
-                <a href="#" class="sidebar-link block p-4 text-xs font-bold uppercase tracking-widest text-slate-400">1.4 Deploying The Scraper</a>
-            </nav>
+    <header class="vault-hero">
+        <div class="max-w-5xl mx-auto">
+            <h4 class="text-blue-400 text-xs font-black tracking-[0.6em] uppercase mb-6 opacity-80 italic">Proprietary Acquisition Framework</h4>
+            <h1 class="serif text-6xl md:text-9xl mb-8 italic leading-tight tracking-tighter uppercase">The <br><span class="text-white not-italic font-bold">Vault</span></h1>
+            
+            <p class="text-slate-300 text-lg md:text-2xl font-light mb-12 uppercase tracking-[0.4em] italic max-w-3xl mx-auto">
+                "Stop chasing commissions. Start harvesting equity."
+            </p>
 
-            <div class="mt-12 p-6 bg-slate-50 rounded">
-                <h6 class="text-[9px] font-bold uppercase mb-4 tracking-widest">Phase 1 Resources</h6>
-                <a href="#" class="text-blue-600 text-xs font-bold underline block mb-2">Wealth Map Worksheet (PDF)</a>
-                <a href="#" class="text-blue-600 text-xs font-bold underline block">Scraper Logic Setup</a>
+            <div class="flex justify-center">
+                <a href="#alpha-advantage" class="btn-vault-primary">Begin Protocol</a>
             </div>
-        </aside>
+        </div>
+    </header>
 
-        <main class="lg:col-span-9 p-8 lg:p-16">
-            <div class="max-w-3xl">
-                <h4 class="text-blue-500 text-[10px] font-black tracking-[0.4em] mb-4 uppercase">Current Lesson: 1.1</h4>
-                <h1 class="serif text-5xl italic mb-8 text-[#1B365D]">The Investor Mindset</h1>
-                
-                <div class="video-container mb-12 shadow-2xl">
-                    <div class="absolute inset-0 flex items-center justify-center text-white/20 text-xs tracking-[0.5em] uppercase">
-                        [ Mindset Video Processing ]
+    <section id="alpha-advantage" class="py-24 bg-[#0a1f44] text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h2 class="serif text-5xl italic mb-8">The "Unfair" Advantage</h2>
+                    <p class="text-slate-400 text-lg leading-loose mb-10 font-light">
+                        Traditional real estate is a game of luck. <strong>The Vault Protocol</strong> is a game of math. We've combined forensic courthouse data with AI-refined underwriting and institutional capital to create a closed-loop system for wealth.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <span class="text-blue-500 font-bold text-xl">✓</span>
+                            <p class="text-[10px] font-bold uppercase tracking-widest">Forensic Scrapers (Off-Market Leads)</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-blue-500 font-bold text-xl">✓</span>
+                            <p class="text-[10px] font-bold uppercase tracking-widest">AI Logic (Deal Verification)</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-blue-500 font-bold text-xl">✓</span>
+                            <p class="text-[10px] font-bold uppercase tracking-widest">Summit Coast Capital (Institutional Funding)</p>
+                        </div>
                     </div>
                 </div>
-
-                <article class="prose prose-slate max-w-none">
-                    <h3 class="serif text-2xl italic text-[#1B365D] mb-4">Establishing the Foundation</h3>
-                    <p class="text-slate-600 leading-loose mb-6">
-                        In this session, we transition away from the traditional real estate agent grind. To succeed with **The Vault Protocol**, you must stop thinking about the next commission check and start thinking about long-term asset acquisition. 
-                    </p>
-                    
-                    <div class="bg-[#0a1f44] text-white p-8 rounded-sm mb-12">
-                        <h4 class="serif italic text-xl mb-4 text-blue-400">The "Steele" Realization:</h4>
-                        <p class="text-sm font-light leading-relaxed opacity-80">
-                            "A commission feeds you for a month. Equity feeds your family for a generation. Most people are too busy chasing the month to see the generation."
-                        </p>
+                <div class="relative">
+                    <div class="marketing-stat">
+                        <div class="serif text-8xl md:text-9xl italic mb-2 text-white">90%</div>
+                        <p class="text-blue-400 text-xs font-black uppercase tracking-[0.5em]">LTC Funding Access</p>
+                        <p class="text-slate-500 text-[10px] mt-4 uppercase leading-relaxed tracking-widest">Exclusive to Vault Protocol Graduates</p>
                     </div>
-
-                    <h3 class="serif text-2xl italic text-[#1B365D] mb-4">Your First Mission</h3>
-                    <p class="text-slate-600 leading-loose mb-6">
-                        Before we touch the scraper technology, you must define your <strong>Freedom Number</strong>. This is the exact monthly passive income required to cover all personal expenses and allow you to work on assets full-time.
-                    </p>
-
-                    <div class="flex items-center justify-between border-t border-b border-slate-100 py-8 mt-12">
-                        <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Previous: Intro</span>
-                        <a href="#" class="bg-[#1B365D] text-white px-10 py-4 text-[10px] font-bold uppercase tracking-widest hover:bg-blue-600 transition">Next Lesson →</a>
-                    </div>
-                </article>
+                </div>
             </div>
-        </main>
+        </div>
+    </section>
 
-    </div>
+    
+
+    <main class="py-32 px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-20">
+            <h3 class="serif text-4xl italic text-[#1B365D] mb-4 uppercase tracking-tighter">The Protocol</h3>
+            <p class="text-slate-400 text-[10px] font-bold uppercase tracking-[0.6em]">Systematic Wealth Generation</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            
+            <div class="phase-card">
+                <div class="phase-number">01</div>
+                <div class="phase-content">
+                    <h4 class="text-blue-500 text-[9px] font-black tracking-[0.4em] mb-6 uppercase italic border-b border-slate-100 pb-4">Harvest</h4>
+                    <h2 class="serif text-3xl italic mb-6 text-[#1B365D]">The Foundation</h2>
+                    <p class="text-slate-500 text-sm leading-loose mb-8">Shift from a commission mindset to an equity mindset. Deploy the courthouse scrapers to identify high-equity distress signals before they reach the retail market.</p>
+                    <a href="#" class="text-[#1B365D] font-bold text-[10px] uppercase tracking-widest underline decoration-2 underline-offset-8">Enter Module</a>
+                </div>
+            </div>
+
+            <div class="phase-card">
+                <div class="phase-number">02</div>
+                <div class="phase-content">
+                    <h4 class="text-slate-300 text-[9px] font-black tracking-[0.4em] mb-6 uppercase italic border-b border-slate-100 pb-4">Refine</h4>
+                    <h2 class="serif text-3xl italic mb-6 text-slate-300">AI Intelligence</h2>
+                    <p class="text-slate-400 text-sm leading-loose mb-8">Utilize proprietary AI logic filters to verify property data, ARV, and rehab feasibility in seconds. Move only on the "Golden Assets."</p>
+                    <span class="text-slate-300 font-bold text-[10px] uppercase tracking-widest italic">Locked</span>
+                </div>
+            </div>
+
+            <div class="phase-card">
+                <div class="phase-number">03</div>
+                <div class="phase-content">
+                    <h4 class="text-slate-300 text-[9px] font-black tracking-[0.4em] mb-6 uppercase italic border-b border-slate-100 pb-4">Strike</h4>
+                    <h2 class="serif text-3xl italic mb-6 text-slate-300">Acquisition</h2>
+                    <p class="text-slate-400 text-sm leading-loose mb-8">Apply the battle-tested negotiation scripts and contracts. Secure equity without using your own cash or personal credit.</p>
+                    <span class="text-slate-300 font-bold text-[10px] uppercase tracking-widest italic">Locked</span>
+                </div>
+            </div>
+
+            <div class="phase-card">
+                <div class="phase-number">04</div>
+                <div class="phase-content">
+                    <h4 class="text-slate-300 text-[9px] font-black tracking-[0.4em] mb-6 uppercase italic border-b border-slate-100 pb-4">Fund</h4>
+                    <h2 class="serif text-3xl italic mb-6 text-slate-300">Exit & Scale</h2>
+                    <p class="text-slate-400 text-sm leading-loose mb-8">Leveraging the Summit Coast Capital institutional line. Close in 7 days and scale from single-family to multi-family portfolios.</p>
+                    <span class="text-slate-300 font-bold text-[10px] uppercase tracking-widest italic">Locked</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-24 bg-white border-t border-slate-50 text-center">
+        <img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="SCC" class="h-10 mx-auto mb-8 opacity-20 grayscale">
+        <a href="../index.html" class="text-[9px] tracking-[0.5em] uppercase text-[#1B365D] font-bold hover:text-blue-500 transition underline underline-offset-8 decoration-1">← Back to Main Terminal</a>
+    </footer>
 
 </body>
 </html>
